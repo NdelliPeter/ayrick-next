@@ -1,0 +1,79 @@
+import { cn } from "@/lib/utils";
+
+/**
+ * PLACEHOLDER IMAGE BLOCK
+ * Real photography is not yet delivered. Every block below is sized and
+ * positioned exactly where the final image will sit — swap the div for an
+ * <img> with the same wrapper classes when assets arrive.
+ */
+export function ImagePlaceholder({
+  label,
+  ratio = "landscape",
+  className,
+  tone = "concrete",
+}: {
+  label?: string;
+  ratio?: "landscape" | "wide" | "portrait" | "square" | "fill";
+  className?: string;
+  tone?: "concrete" | "steel";
+}) {
+  const ratios: Record<string, string> = {
+    landscape: "aspect-[4/3]",
+    wide: "aspect-[16/9]",
+    portrait: "aspect-[3/4]",
+    square: "aspect-square",
+    fill: "h-full w-full",
+  };
+
+  return (
+    <div
+      data-image-placeholder
+      className={cn(
+        "relative flex items-end overflow-hidden",
+        tone === "concrete" ? "bg-concrete-dark" : "bg-steel/25",
+        ratios[ratio],
+        className,
+      )}
+    >
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-[0.35]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(135deg, transparent 0 22px, color-mix(in oklab, var(--steel) 22%, transparent) 22px 23px)",
+        }}
+      />
+      <div className="relative z-10 flex w-full items-end justify-between gap-4 p-4">
+        <span className="label-meta text-foreground/60">Image Placeholder</span>
+        {label ? (
+          <span className="max-w-[60%] text-right text-xs font-medium tracking-wide text-foreground/50">
+            {label}
+          </span>
+        ) : null}
+      </div>
+    </div>
+  );
+}
+
+/** Wordmark placeholder — no icon, easy to replace with the final logo file. */
+export function LogoWordmark({
+  className,
+  variant = "dark",
+}: {
+  className?: string;
+  variant?: "dark" | "light";
+}) {
+  return (
+    <span
+      data-logo-placeholder
+      className={cn(
+        "font-display text-[1.05rem] font-semibold uppercase leading-none tracking-[0.22em]",
+        variant === "light" ? "text-primary-foreground" : "text-foreground",
+        className,
+      )}
+    >
+      Ayrick
+      <span className="ml-2 font-normal tracking-[0.22em] opacity-60">Architecture</span>
+    </span>
+  );
+}
