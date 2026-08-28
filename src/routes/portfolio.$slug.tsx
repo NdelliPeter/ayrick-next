@@ -54,7 +54,7 @@ function ProjectDetail() {
   const { t } = useLang();
 
   const idx = projects.findIndex((p) => p.slug === project.slug);
-  const next = projects[(idx + 1) % projects.length];
+  const next = projects[(idx + 1) % projects.length]!;
 
   const facts: { label: string; value: string }[] = [
     { label: t(ui.category), value: t(CATEGORY_LABELS[project.category]) },
@@ -118,7 +118,7 @@ function ProjectDetail() {
               key={label}
               label={label}
               ratio={i % 5 === 0 ? "wide" : "landscape"}
-              className={i % 5 === 0 ? "md:col-span-2" : undefined}
+              {...(i % 5 === 0 ? { className: "md:col-span-2" } : {})}
             />
           ))}
         </div>
