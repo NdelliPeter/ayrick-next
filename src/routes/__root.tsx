@@ -81,14 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ayrick Architecture — International Architecture Practice" },
+      { title: "Ayrick Makers Group — Architecture & Construction" },
       {
         name: "description",
         content:
-          "Ayrick Architecture designs civic, commercial and residential buildings across 26 countries, with structural rigour and long-term stewardship.",
+          "Ayrick Makers Group creates spaces that combine innovation, function and timeless design — architecture, interiors, visualization and construction from Accra, Ghana.",
       },
-      { name: "author", content: "Ayrick Architecture" },
-      { property: "og:title", content: "Ayrick Architecture — International Architecture Practice" },
+      { name: "author", content: "Ayrick Makers Group" },
+      { property: "og:title", content: "Ayrick Makers Group — Architecture & Construction" },
       {
         property: "og:description",
         content: "Civic, commercial and residential architecture delivered across four continents since 1988.",
