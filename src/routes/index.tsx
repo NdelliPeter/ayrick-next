@@ -134,6 +134,18 @@ function Index() {
         </Link>
       </Section>
 
+      {/* Client portal */}
+      <Section>
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p className="eyebrow text-accent">{t(home.portalEyebrow)}</p>
+            <h2 className="display-lg mt-4">{t(home.portalTitle)}</h2>
+            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">{t(home.portalBody)}</p>
+          </div>
+          <ImagePlaceholder ratio="landscape" label="Client portal — interface preview" />
+        </div>
+      </Section>
+
       {/* CTA */}
       <Section dark>
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-end">
