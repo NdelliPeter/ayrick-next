@@ -10,21 +10,24 @@ import { useLang } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ayrick Architecture — Buildings Built to Last a Century" },
+      { title: "Ayrick Makers Group — Architecture & Construction in Accra" },
       {
         name: "description",
         content:
-          "International architecture practice delivering civic, commercial and residential projects across 26 countries with structural rigour and material discipline.",
+          "Ayrick Makers Group creates spaces that combine innovation, function and timeless design. 18+ years of experience, 80 projects delivered, studio in Accra, Ghana.",
       },
-      { property: "og:title", content: "Ayrick Architecture — Buildings Built to Last a Century" },
+      { property: "og:title", content: "Ayrick Makers Group — Architecture & Construction" },
       {
         property: "og:description",
-        content: "Civic, commercial and residential architecture delivered across four continents since 1988.",
+        content: "Building spaces that matter — architecture, interiors, 3D visualization and construction supervision.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
 });
+
 
 function Index() {
   const { t } = useLang();
