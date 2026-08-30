@@ -21,7 +21,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-rule bg-background/95 backdrop-blur">
       <div className="container-wide flex h-[72px] items-center justify-between gap-8">
-        <Link to="/" onClick={() => setOpen(false)} aria-label="Ayrick Architecture — home">
+        <Link to="/" onClick={() => setOpen(false)} aria-label="Ayrick Makers Group — home">
           <LogoWordmark />
         </Link>
 
