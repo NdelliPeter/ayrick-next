@@ -1,24 +1,26 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { ImagePlaceholder } from "@/components/Placeholder";
-import { PageHero, Section } from "@/components/Section";
-import { home, services, ui } from "@/content/site";
+import { PageHero, Section, SectionHead } from "@/components/Section";
+import { faqs, home, process, services, servicesIntro, ui } from "@/content/site";
 import { useLang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Architecture, Masterplanning & Delivery | Ayrick" },
+      { title: "Services — Design, Visualization & Supervision | Ayrick Makers Group" },
       {
         name: "description",
         content:
-          "Architecture, masterplanning, adaptive reuse, interiors, sustainability and site supervision — delivered by permanent partner-led teams.",
+          "Concept design, layouts and plans, 3D visualization and walkthroughs, project supervision and contract management — from vision to reality.",
       },
-      { property: "og:title", content: "Services — Architecture, Masterplanning & Delivery | Ayrick" },
+      { property: "og:title", content: "Services — Ayrick Makers Group" },
       {
         property: "og:description",
-        content: "Six capabilities, from concept design to resident site supervision.",
+        content: "Five service lines, a clear five-stage process, and answers to common questions.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ServicesPage,
@@ -31,11 +33,8 @@ function ServicesPage() {
     <>
       <PageHero
         eyebrow={t(home.servicesEyebrow)}
-        title={t(home.servicesTitle)}
-        lead={t({
-          en: "Six capabilities, run by the same permanent teams. Clients appoint us for one and usually keep us through the rest.",
-          fr: "Six compétences, portées par les mêmes équipes permanentes. Nos clients nous confient l'une d'elles et nous gardent généralement pour les autres.",
-        })}
+        title={t(servicesIntro.title)}
+        lead={t(servicesIntro.body)}
       />
 
       {services.map((s, i) => (
@@ -59,6 +58,43 @@ function ServicesPage() {
           </div>
         </Section>
       ))}
+
+      <Section>
+        <SectionHead
+          eyebrow={t({ en: "Process", fr: "Processus" })}
+          title={t({ en: "How a project runs", fr: "Le déroulement d'un projet" })}
+        />
+        <div className="mt-14 grid border-t border-rule md:grid-cols-2 lg:grid-cols-5">
+          {process.map((p) => (
+            <div
+              key={p.step}
+              className="border-b border-rule py-10 pr-8 lg:[&:not(:first-child)]:border-l lg:[&:not(:first-child)]:pl-8"
+            >
+              <span className="label-meta text-accent">{p.step}</span>
+              <h3 className="mt-4 font-display text-xl">{t(p.title)}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(p.body)}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHead
+          eyebrow={t({ en: "FAQ", fr: "FAQ" })}
+          title={t({ en: "Questions clients ask", fr: "Les questions fréquentes" })}
+        />
+        <div className="mt-14 border-t border-rule">
+          {faqs.map((f) => (
+            <div
+              key={f.q.en}
+              className="grid gap-4 border-b border-rule py-8 lg:grid-cols-[1fr_1.4fr] lg:gap-12"
+            >
+              <h3 className="font-display text-xl">{t(f.q)}</h3>
+              <p className="leading-relaxed text-muted-foreground">{t(f.a)}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
 
       <Section dark>
         <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-end">
