@@ -8,14 +8,14 @@ import { useLang } from "@/lib/i18n";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Ayrick Architecture" },
+      { title: "Contact — Ayrick Makers Group, Accra" },
       {
         name: "description",
         content:
-          "Six studios in Rotterdam, London, Douala, Singapore, Montréal and Marrakech. Send a brief and a partner will respond within two working days.",
+          "Studio in West Legon, Accra, Ghana. Send your project brief and we will get back to you shortly — phone, WhatsApp and email available.",
       },
-      { property: "og:title", content: "Contact — Ayrick Architecture" },
-      { property: "og:description", content: "Office locations and project enquiries." },
+      { property: "og:title", content: "Contact — Ayrick Makers Group" },
+      { property: "og:description", content: "Studio address, phone, WhatsApp, email and project enquiry form." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:url", content: "https://ayrick-architects-forge.lovable.app/contact" },
@@ -31,6 +31,7 @@ const inputClass =
 function ContactPage() {
   const { t } = useLang();
   const [sent, setSent] = useState(false);
+  const d = contact.details;
 
   return (
     <>
@@ -61,25 +62,34 @@ function ContactPage() {
                   <input required type="email" name="email" className={inputClass} />
                 </label>
                 <label className="block text-sm">
-                  <span className="label-meta">{t(contact.fields.organisation)}</span>
-                  <input name="organisation" className={inputClass} />
+                  <span className="label-meta">{t(contact.fields.phone)}</span>
+                  <input name="phone" type="tel" className={inputClass} />
                 </label>
                 <label className="block text-sm">
                   <span className="label-meta">{t(contact.fields.location)}</span>
                   <input name="location" className={inputClass} />
                 </label>
+                <label className="block text-sm">
+                  <span className="label-meta">{t(contact.fields.type)}</span>
+                  <select name="type" className={inputClass}>
+                    {contact.enquiryTypes.map((o) => (
+                      <option key={o.en} value={o.en}>
+                        {t(o)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <label className="block text-sm">
+                  <span className="label-meta">{t(contact.fields.budget)}</span>
+                  <select name="budget" className={inputClass}>
+                    {contact.budgetRanges.map((o) => (
+                      <option key={o.en} value={o.en}>
+                        {t(o)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
               </div>
-
-              <label className="mt-6 block text-sm">
-                <span className="label-meta">{t(contact.fields.type)}</span>
-                <select name="type" className={inputClass}>
-                  {contact.enquiryTypes.map((o) => (
-                    <option key={o.en} value={o.en}>
-                      {t(o)}
-                    </option>
-                  ))}
-                </select>
-              </label>
 
               <label className="mt-6 block text-sm">
                 <span className="label-meta">{t(contact.fields.message)}</span>
@@ -95,10 +105,7 @@ function ContactPage() {
 
               {sent ? (
                 <p className="mt-5 border-l-2 border-accent pl-4 text-sm text-muted-foreground">
-                  {t({
-                    en: "Thank you — your enquiry has been recorded. A partner will respond within two working days.",
-                    fr: "Merci — votre demande a été enregistrée. Un associé vous répondra sous deux jours ouvrés.",
-                  })}
+                  {t(contact.thankYou)}
                 </p>
               ) : null}
             </form>
@@ -106,23 +113,65 @@ function ContactPage() {
 
           <div>
             <p className="label-meta">{t(contact.officesTitle)}</p>
-            <ul className="mt-8 border-t border-rule">
-              {contact.offices.map((office) => (
-                <li
-                  key={office.city}
-                  className="grid gap-1 border-b border-rule py-5 sm:grid-cols-[9rem_1fr]"
-                >
-                  <span className="font-display text-lg font-semibold">{office.city}</span>
-                  <span className="text-sm leading-relaxed text-muted-foreground">
-                    {office.lines.map((l) => (
-                      <span key={l} className="block">
-                        {l}
-                      </span>
-                    ))}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <dl className="mt-8 border-t border-rule">
+              <div className="grid gap-1 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]">
+                <dt className="label-meta">{t(d.addressLabel)}</dt>
+                <dd className="text-sm leading-relaxed text-muted-foreground">
+                  {d.address.map((l) => (
+                    <span key={l} className="block">
+                      {l}
+                    </span>
+                  ))}
+                </dd>
+              </div>
+              <div className="grid gap-1 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]">
+                <dt className="label-meta">{t(d.phoneLabel)}</dt>
+                <dd className="text-sm">
+                  <a href={`tel:${d.phone.replace(/\s/g, "")}`} className="link-underline">
+                    {d.phone}
+                  </a>
+                </dd>
+              </div>
+              <div className="grid gap-1 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]">
+                <dt className="label-meta">{t(d.whatsappLabel)}</dt>
+                <dd className="text-sm">
+                  <a
+                    href={`https://wa.me/${d.whatsapp.replace(/\D/g, "")}`}
+                    className="link-underline"
+                  >
+                    {d.whatsapp}
+                  </a>
+                </dd>
+              </div>
+              <div className="grid gap-1 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]">
+                <dt className="label-meta">{t(d.emailLabel)}</dt>
+                <dd className="text-sm">
+                  <a href={`mailto:${d.email}`} className="link-underline">
+                    {d.email}
+                  </a>
+                </dd>
+              </div>
+              <div className="grid gap-1 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]">
+                <dt className="label-meta">{t(d.principalEmailLabel)}</dt>
+                <dd className="text-sm">
+                  <a href={`mailto:${d.principalEmail}`} className="link-underline">
+                    {d.principalEmail}
+                  </a>
+                </dd>
+              </div>
+              <div className="grid gap-1 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]">
+                <dt className="label-meta">{t(d.hoursLabel)}</dt>
+                <dd className="text-sm text-muted-foreground">{t(d.hours)}</dd>
+              </div>
+              <div className="grid gap-1 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]">
+                <dt className="label-meta">{t(d.instagramLabel)}</dt>
+                <dd className="text-sm">
+                  <a href={d.instagramUrl} className="link-underline" rel="noreferrer" target="_blank">
+                    @{d.instagram}
+                  </a>
+                </dd>
+              </div>
+            </dl>
           </div>
         </div>
       </Section>
