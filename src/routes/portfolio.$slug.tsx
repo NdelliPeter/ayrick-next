@@ -15,7 +15,7 @@ export const Route = createFileRoute("/portfolio/$slug")({
   head: ({ params, loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Project not found — Ayrick Architecture" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Project not found — Ayrick Makers Group" }, { name: "robots", content: "noindex" }],
       };
     }
     const p = loaderData.project;
@@ -23,9 +23,9 @@ export const Route = createFileRoute("/portfolio/$slug")({
     const url = `https://ayrick-architects-forge.lovable.app/portfolio/${params.slug}`;
     return {
       meta: [
-        { title: `${p.name} — Ayrick Architecture` },
+        { title: `${p.name} — Ayrick Makers Group` },
         { name: "description", content: description },
-        { property: "og:title", content: `${p.name} — Ayrick Architecture` },
+        { property: "og:title", content: `${p.name} — Ayrick Makers Group` },
         { property: "og:description", content: description },
         { property: "og:type", content: "article" },
         { property: "og:url", content: url },

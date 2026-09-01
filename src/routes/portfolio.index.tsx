@@ -11,13 +11,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/portfolio/")({
   head: () => ({
     meta: [
-      { title: "Portfolio — Ayrick Architecture" },
+      { title: "Portfolio — Ayrick Makers Group" },
       {
         name: "description",
         content:
-          "Civic, commercial, hospitality, residential and mixed-use projects delivered by Ayrick Architecture across twenty-six countries.",
+          "Residential, commercial, hospitality, public and mixed-use projects designed and delivered by Ayrick Makers Group.",
       },
-      { property: "og:title", content: "Portfolio — Ayrick Architecture" },
+      { property: "og:title", content: "Portfolio — Ayrick Makers Group" },
       {
         property: "og:description",
         content: "The complete project archive, filterable by sector.",

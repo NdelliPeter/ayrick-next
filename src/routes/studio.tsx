@@ -8,17 +8,19 @@ import { useLang } from "@/lib/i18n";
 export const Route = createFileRoute("/studio")({
   head: () => ({
     meta: [
-      { title: "Studio — Ayrick Architecture" },
+      { title: "Studio — Ayrick Makers Group" },
       {
         name: "description",
         content:
-          "Founded in 1988, Ayrick Architecture is a 240-person practice with six studios worldwide, built around delivery, structural honesty and material restraint.",
+          "Established in Ghana in 2023 with roots in over 18 years of architectural practice, Ayrick Makers Group improves quality of life through better architecture.",
       },
-      { property: "og:title", content: "Studio — Ayrick Architecture" },
+      { property: "og:title", content: "Studio — Ayrick Makers Group" },
       {
         property: "og:description",
-        content: "Our story, mission, values, leadership and international presence.",
+        content: "Our story, design philosophy, team, credentials and where we work.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: StudioPage,
@@ -49,9 +51,9 @@ function StudioPage() {
           </div>
         </div>
         <div className="mt-16 grid gap-6 md:grid-cols-3">
-          <ImagePlaceholder ratio="landscape" label="Studio — Rotterdam workspace" />
-          <ImagePlaceholder ratio="landscape" label="Studio — model workshop" />
-          <ImagePlaceholder ratio="landscape" label="Studio — site review meeting" />
+          <ImagePlaceholder ratio="landscape" label="Studio — Accra workspace" />
+          <ImagePlaceholder ratio="landscape" label="Studio — design review" />
+          <ImagePlaceholder ratio="landscape" label="Studio — site supervision" />
         </div>
       </Section>
 
@@ -61,15 +63,21 @@ function StudioPage() {
           title={t(studio.mission)}
           className="max-w-4xl"
         />
+        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-primary-foreground/65">
+          {t(studio.missionBody)}
+        </p>
       </Section>
 
       <Section>
-        <SectionHead eyebrow={t(studio.valuesTitle)} title={t({ en: "How we work", fr: "Notre manière de travailler" })} />
+        <SectionHead
+          eyebrow={t(studio.valuesTitle)}
+          title={t({ en: "Our capabilities", fr: "Nos compétences" })}
+        />
         <div className="mt-14 grid border-t border-rule md:grid-cols-2 lg:grid-cols-4">
           {studio.values.map((v) => (
             <div
               key={v.title.en}
-              className="border-b border-rule py-10 pr-8 lg:[&:not(:first-child)]:border-l lg:[&:not(:first-child)]:pl-8"
+              className="border-b border-rule py-10 pr-8 lg:[&:not(:nth-child(4n+1))]:border-l lg:[&:not(:nth-child(4n+1))]:pl-8"
             >
               <h3 className="font-display text-xl">{t(v.title)}</h3>
               <p className="mt-3 text-muted-foreground">{t(v.body)}</p>
@@ -81,7 +89,7 @@ function StudioPage() {
       <Section>
         <SectionHead
           eyebrow={t(studio.leadershipTitle)}
-          title={t({ en: "Partners and directors", fr: "Associés et directeurs" })}
+          title={t({ en: "The people behind the work", fr: "Les personnes derrière le travail" })}
         />
         <div className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {studio.leadership.map((person) => (
@@ -90,9 +98,39 @@ function StudioPage() {
               <div className="mt-4 border-t border-rule pt-4">
                 <h3 className="font-display text-lg">{person.name}</h3>
                 <p className="label-meta mt-1">{t(person.role)}</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t(person.bio)}</p>
               </div>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <Section>
+        <div className="grid gap-14 lg:grid-cols-2">
+          <div>
+            <p className="label-meta">{t(studio.credentialsTitle)}</p>
+            <div className="mt-8 border-t border-rule">
+              {studio.credentials.map((c) => (
+                <div
+                  key={c.label.en}
+                  className="grid gap-1 border-b border-rule py-5 sm:grid-cols-2 sm:items-baseline"
+                >
+                  <span className="label-meta">{t(c.label)}</span>
+                  <span className="font-display text-xl">{t(c.value)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="label-meta">{t(studio.certificationsTitle)}</p>
+            <ul className="mt-8 border-t border-rule">
+              {studio.certifications.map((c) => (
+                <li key={c} className="border-b border-rule py-3.5 text-sm">
+                  {c}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </Section>
 

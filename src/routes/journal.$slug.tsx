@@ -14,14 +14,14 @@ export const Route = createFileRoute("/journal/$slug")({
   head: ({ params, loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Article not found — Ayrick Architecture" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Article not found — Ayrick Makers Group" }, { name: "robots", content: "noindex" }],
       };
     }
     const e = loaderData.entry;
     const url = `https://ayrick-architects-forge.lovable.app/journal/${params.slug}`;
     return {
       meta: [
-        { title: `${e.title.en} — Ayrick Architecture` },
+        { title: `${e.title.en} — Ayrick Makers Group` },
         { name: "description", content: e.excerpt.en.slice(0, 155) },
         { property: "og:title", content: e.title.en },
         { property: "og:description", content: e.excerpt.en.slice(0, 155) },
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/journal/$slug")({
             "@type": "Article",
             headline: e.title.en,
             datePublished: e.date,
-            author: { "@type": "Organization", name: "Ayrick Architecture" },
+            author: { "@type": "Organization", name: "Ayrick Makers Group" },
           }),
         },
       ],

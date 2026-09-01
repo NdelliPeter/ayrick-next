@@ -1,19 +1,19 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import { PageHero } from "@/components/Section";
-import { journal } from "@/content/site";
+import { journal, journalMeta } from "@/content/site";
 import { useLang } from "@/lib/i18n";
 
 export const Route = createFileRoute("/journal/")({
   head: () => ({
     meta: [
-      { title: "Journal — Ayrick Architecture" },
+      { title: "Journal — Ayrick Makers Group" },
       {
         name: "description",
         content:
-          "Project news, practice updates and technical insight from Ayrick Architecture's six studios.",
+          "Thoughts, insights and stories on architecture, design approaches, project experience and the future of the built environment.",
       },
-      { property: "og:title", content: "Journal — Ayrick Architecture" },
+      { property: "og:title", content: "Journal — Ayrick Makers Group" },
       { property: "og:description", content: "News and insight from the practice." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -30,12 +30,9 @@ function JournalPage() {
   return (
     <>
       <PageHero
-        eyebrow={t({ en: "Journal", fr: "Journal" })}
+        eyebrow={t(journalMeta.title)}
         title={t({ en: "Notes from the practice.", fr: "Notes de l'agence." })}
-        lead={t({
-          en: "Site reports, material research and studio news — written by the people doing the work.",
-          fr: "Comptes rendus de chantier, recherche matérielle et actualités des studios — écrits par ceux qui font le travail.",
-        })}
+        lead={t(journalMeta.intro)}
       />
 
       <section className="py-4">
@@ -67,6 +64,9 @@ function JournalPage() {
               </div>
             </Link>
           ))}
+          <p className="max-w-3xl py-10 text-sm leading-relaxed text-muted-foreground">
+            {t(journalMeta.author)}
+          </p>
         </div>
       </section>
     </>
