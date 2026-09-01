@@ -26,7 +26,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 const inputClass =
-  "mt-2 w-full border border-input bg-transparent px-4 py-3 text-sm outline-none transition-colors focus:border-accent";
+  "mt-2 w-full border border-input bg-transparent px-4 py-3 text-sm outline-none transition-colors focus:border-primary";
 
 function ContactPage() {
   const { t } = useLang();

@@ -55,10 +55,10 @@ function JournalPage() {
                     year: "numeric",
                   })}
                 </p>
-                <p className="mt-2 text-sm text-accent">{t(entry.category)}</p>
+                <p className="mt-2 text-sm text-primary">{t(entry.category)}</p>
               </div>
               <div className="max-w-3xl">
-                <h2 className="font-display text-2xl transition-colors group-hover:text-accent md:text-3xl">
+                <h2 className="font-display text-2xl transition-colors group-hover:text-primary md:text-3xl">
                   {t(entry.title)}
                 </h2>
                 <p className="mt-3 text-base leading-relaxed text-muted-foreground">

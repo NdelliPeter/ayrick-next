@@ -13,7 +13,7 @@ export function SiteFooter() {
     <footer className="mt-0 bg-navy-deep text-primary-foreground">
       <div className="container-wide grid gap-12 py-20 lg:grid-cols-[1.4fr_1fr_1.6fr]">
         <div>
-          <LogoWordmark variant="light" />
+          <LogoWordmark />
           <p className="mt-6 max-w-sm text-sm text-primary-foreground/60">
             {t({
               en: "International architecture practice. Civic, commercial and residential work delivered across twenty-six countries since 1988.",

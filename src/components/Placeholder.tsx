@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import ayrickLogo from "@/assets/ayrick-logo.png";
 
 /**
  * PLACEHOLDER IMAGE BLOCK
@@ -55,25 +56,9 @@ export function ImagePlaceholder({
   );
 }
 
-/** Wordmark placeholder — no icon, easy to replace with the final logo file. */
-export function LogoWordmark({
-  className,
-  variant = "dark",
-}: {
-  className?: string;
-  variant?: "dark" | "light";
-}) {
+/** Ayrick logo mark. Transparent background — renders correctly on both light and dark sections. */
+export function LogoWordmark({ className }: { className?: string }) {
   return (
-    <span
-      data-logo-placeholder
-      className={cn(
-        "font-display text-[1.05rem] font-semibold uppercase leading-none tracking-[0.22em]",
-        variant === "light" ? "text-primary-foreground" : "text-foreground",
-        className,
-      )}
-    >
-      Ayrick
-      <span className="ml-2 font-normal tracking-[0.22em] opacity-60">Architecture</span>
-    </span>
+    <img src={ayrickLogo} alt="Ayrick Architecture" className={cn("h-14 w-auto", className)} />
   );
 }

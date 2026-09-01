@@ -5,10 +5,11 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * AYRICK ARCHITECTURE — GLOBAL BRAND CONFIG (placeholder, easy to swap)
+ * AYRICK GROUP LTD — GLOBAL BRAND CONFIG
  * ---------------------------------------------------------------------
- * Brand colors: deep navy, steel grey, concrete off-white, single accent.
- * Typography: grotesk display (Archivo) + clean sans body (IBM Plex Sans).
+ * Colors sampled directly from the Ayrick logo: deep teal primary,
+ * a neutral grey-teal ramp for structure. See ayrick-style-guide.html.
+ * Typography: Roboto (headings/display) + Inter (body, labels, UI).
  * Radius: zero everywhere by deliberate brand decision.
  */
 
@@ -23,8 +24,8 @@
   --radius-4xl: 0px;
   --radius-full: 0px;
 
-  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --font-sans: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  --font-display: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Inter", Helvetica, Arial, sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -40,6 +41,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
@@ -56,34 +58,37 @@
 :root {
   --radius: 0px;
 
-  /* Brand palette */
-  --navy-deep: oklch(0.19 0.038 258);
-  --navy: oklch(0.27 0.045 258);
-  --steel: oklch(0.55 0.014 258);
-  --concrete: oklch(0.955 0.004 90);
-  --concrete-dark: oklch(0.9 0.005 90);
-  --rule: oklch(0.86 0.006 258);
+  /* Brand palette — sampled from the Ayrick logo (ayrick-style-guide.html, Sheet 02) */
+  --navy-deep: #1A1E1E;
+  --navy: #0C5A53;
+  --steel: #6C7F7D;
+  --concrete: #F7F8F8;
+  --concrete-dark: #DBE1E0;
+  --rule: #DBE1E0;
 
-  --background: oklch(0.975 0.003 90);
-  --foreground: oklch(0.19 0.038 258);
+  --background: #F7F8F8;
+  --foreground: #1A1E1E;
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.19 0.038 258);
+  --card-foreground: #1A1E1E;
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.19 0.038 258);
-  --primary: oklch(0.19 0.038 258);
-  --primary-foreground: oklch(0.975 0.003 90);
-  --secondary: oklch(0.9 0.005 90);
-  --secondary-foreground: oklch(0.19 0.038 258);
-  --muted: oklch(0.93 0.004 90);
-  --muted-foreground: oklch(0.5 0.014 258);
-  /* Single accent color — terracotta/ochre */
-  --accent: oklch(0.58 0.14 45);
-  --accent-foreground: oklch(0.98 0.003 90);
+  --popover-foreground: #1A1E1E;
+  /* Teal 700 — Sheet 03: "the workhorse action color — buttons, links, active states" */
+  --primary: #107A70;
+  --primary-foreground: #FFFFFF;
+  --secondary: #ECEFEE;
+  --secondary-foreground: #1A1E1E;
+  --muted: #ECEFEE;
+  --muted-foreground: #6C7F7D;
+  /* Neutral — shadcn's own hover/selected-menu-item convention, deliberately not teal (Sheet 03: "teal should feel like an accent, not a wash") */
+  --accent: #ECEFEE;
+  --accent-foreground: #1A1E1E;
+  /* Teal 100 — tag/badge background, matches Sheet 04's .ex-tag */
+  --accent-soft: #D2F9F5;
   --destructive: oklch(0.52 0.19 27);
   --destructive-foreground: oklch(0.98 0.003 90);
-  --border: oklch(0.86 0.006 258);
-  --input: oklch(0.8 0.008 258);
-  --ring: oklch(0.58 0.14 45);
+  --border: #DBE1E0;
+  --input: #DBE1E0;
+  --ring: #107A70;
 }
 
 @layer base {
@@ -109,7 +114,7 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.04;
   }
@@ -129,10 +134,11 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-primary);
 }
 
 @utility label-meta {
+  font-family: var(--font-sans);
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.14em;

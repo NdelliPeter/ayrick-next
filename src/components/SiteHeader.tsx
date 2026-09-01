@@ -51,7 +51,7 @@ export function SiteHeader() {
                   aria-pressed={lang === code}
                   className={cn(
                     "px-0.5 transition-colors",
-                    lang === code ? "text-accent" : "text-muted-foreground hover:text-foreground",
+                    lang === code ? "text-primary" : "text-muted-foreground hover:text-foreground",
                   )}
                 >
                   {code.toUpperCase()}
