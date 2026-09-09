@@ -1,0 +1,181 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * AYRICK GROUP LTD — GLOBAL BRAND CONFIG
+ * ---------------------------------------------------------------------
+ * Colors sampled directly from the Ayrick logo: deep teal primary,
+ * a neutral grey-teal ramp for structure. See ayrick-style-guide.html.
+ * Typography: Roboto (headings/display) + Inter (body, labels, UI).
+ * Radius: zero everywhere by deliberate brand decision.
+ */
+
+@theme inline {
+  --radius-none: 0px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+  --radius-full: 0px;
+
+  --font-display: var(--font-roboto), "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-inter), Helvetica, Arial, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-steel: var(--steel);
+  --color-concrete: var(--concrete);
+  --color-concrete-dark: var(--concrete-dark);
+  --color-rule: var(--rule);
+}
+
+:root {
+  --radius: 0px;
+
+  /* Brand palette — sampled from the Ayrick logo (ayrick-style-guide.html, Sheet 02) */
+  --navy-deep: #1A1E1E;
+  --navy: #0C5A53;
+  --steel: #6C7F7D;
+  --concrete: #F7F8F8;
+  --concrete-dark: #DBE1E0;
+  --rule: #DBE1E0;
+
+  --background: #F7F8F8;
+  --foreground: #1A1E1E;
+  --card: oklch(1 0 0);
+  --card-foreground: #1A1E1E;
+  --popover: oklch(1 0 0);
+  --popover-foreground: #1A1E1E;
+  /* Teal 700 — Sheet 03: "the workhorse action color — buttons, links, active states" */
+  --primary: #107A70;
+  --primary-foreground: #FFFFFF;
+  --secondary: #ECEFEE;
+  --secondary-foreground: #1A1E1E;
+  --muted: #ECEFEE;
+  --muted-foreground: #6C7F7D;
+  /* Neutral — shadcn's own hover/selected-menu-item convention, deliberately not teal (Sheet 03: "teal should feel like an accent, not a wash") */
+  --accent: #ECEFEE;
+  --accent-foreground: #1A1E1E;
+  /* Teal 100 — tag/badge background, matches Sheet 04's .ex-tag */
+  --accent-soft: #D2F9F5;
+  --destructive: oklch(0.52 0.19 27);
+  --destructive-foreground: oklch(0.98 0.003 90);
+  --border: #DBE1E0;
+  --input: #DBE1E0;
+  --ring: #107A70;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+    border-radius: 0 !important;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.04;
+  }
+}
+
+/* Editorial helpers */
+@utility container-wide {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 96rem;
+  padding-inline: 1.5rem;
+}
+
+@utility eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+@utility label-meta {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+}
+
+@utility display-xl {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  font-size: clamp(2.6rem, 6.4vw, 5.6rem);
+}
+
+@utility display-lg {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+@utility link-underline {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
