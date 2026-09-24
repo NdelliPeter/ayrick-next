@@ -127,11 +127,6 @@ import aburiRoadVillaG1 from "@/assets/projects-curated/aburi-road-villa/gallery
 import aburiRoadVillaG2 from "@/assets/projects-curated/aburi-road-villa/gallery-02.jpg";
 import aburiRoadVillaG3 from "@/assets/projects-curated/aburi-road-villa/gallery-03.jpg";
 
-// — Project: Iran Embassy Residence —
-import iranEmbassyResidenceHero from "@/assets/projects-curated/iran-embassy-residence/hero.jpg";
-import iranEmbassyResidenceG1 from "@/assets/projects-curated/iran-embassy-residence/gallery-01.jpg";
-import iranEmbassyResidenceG2 from "@/assets/projects-curated/iran-embassy-residence/gallery-02.jpg";
-
 // — Project: 3&2 Bedroom Apartments, 3 Blocks —
 import apartments3BlocksHero from "@/assets/projects-curated/apartments-3-blocks-freetown/hero.jpg";
 import apartments3BlocksG1 from "@/assets/projects-curated/apartments-3-blocks-freetown/gallery-01.jpg";
@@ -519,34 +514,6 @@ export const projects: Project[] = [
     heroImage: parasitologyLabHero,
     gallery: [parasitologyLabG1, parasitologyLabG2],
     featured: false,
-  },
-  {
-    slug: "iran-embassy-residence",
-    name: "Iran Embassy Residence",
-    category: "Residential",
-    location: "Iran",
-    year: "—",
-    clientType: "Government",
-    scope: CIVIC_SCOPE,
-    size: "—",
-    materials: RESIDENTIAL_MATERIALS,
-    description: {
-      en: "A diplomatic residence in Iran, delivered as part of Ayrick's international portfolio.",
-      fr: "A diplomatic residence in Iran, delivered as part of Ayrick's international portfolio.",
-    },
-    highlights: {
-      en: [
-        "Diplomatic residential facility",
-        "Delivered as part of Ayrick's international portfolio",
-      ],
-      fr: [
-        "Diplomatic residential facility",
-        "Delivered as part of Ayrick's international portfolio",
-      ],
-    },
-    heroImage: iranEmbassyResidenceHero,
-    gallery: [iranEmbassyResidenceG1, iranEmbassyResidenceG2],
-    featured: true,
   },
   {
     slug: "aburi-road-villa",

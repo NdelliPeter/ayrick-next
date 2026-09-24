@@ -61,12 +61,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
   return (
     <>
-      <PageHero
-        eyebrow={t(home.servicesEyebrow)}
-        title={t(servicesIntro.title)}
-        lead={t(servicesIntro.body)}
-        image={servicesHero}
-      />
+      <PageHero title={t(servicesIntro.title)} lead={t(servicesIntro.body)} image={servicesHero} />
 
       {services.map((s, i) => (
         <Section key={s.number}>

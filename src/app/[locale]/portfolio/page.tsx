@@ -46,7 +46,6 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
   return (
     <>
       <PageHero
-        eyebrow={t({ en: "Portfolio", fr: "Réalisations" })}
         title={t({ en: "Every project, on the record.", fr: "Chaque projet, consigné." })}
         lead={t({
           en: "Twenty-four selected commissions from Ayrick's project archive, spanning residential, civic and mixed-use work.",

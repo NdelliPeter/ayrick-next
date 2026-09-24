@@ -44,7 +44,7 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
   const { locale } = await params;
   setRequestLocale(locale);
   const t = <T,>(v: { en: T; fr: T }) => pick(locale, v);
-  const featured = featuredProjects.slice(0, 6);
+  const featured = featuredProjects.slice(0, 4);
 
   return (
     <>
@@ -120,7 +120,7 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
               {t(home.positionBody)}
             </p>
             <Link
-              href="/studio"
+              href="/studio/about-us"
               className="link-underline label-meta mt-8 inline-block text-foreground"
             >
               {t({ en: "About the studio", fr: "À propos du studio" })} →

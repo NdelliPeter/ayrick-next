@@ -47,12 +47,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <>
-      <PageHero
-        eyebrow={t(contact.heroEyebrow)}
-        title={t(contact.heroTitle)}
-        lead={t(contact.heroLead)}
-        image={contactHero}
-      />
+      <PageHero title={t(contact.heroTitle)} lead={t(contact.heroLead)} image={contactHero} />
 
       <Section>
         <div className="grid gap-16 lg:grid-cols-[1.1fr_1fr]">

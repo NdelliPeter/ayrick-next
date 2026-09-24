@@ -46,7 +46,6 @@ export default async function JournalPage({ params }: { params: Promise<{ locale
   return (
     <>
       <PageHero
-        eyebrow={t(journalMeta.title)}
         title={t({ en: "Notes from the practice.", fr: "Notes de l'agence." })}
         lead={t(journalMeta.intro)}
         image={journalHero}

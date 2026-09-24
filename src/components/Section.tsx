@@ -47,12 +47,10 @@ export function SectionHead({
 }
 
 export function PageHero({
-  eyebrow,
   title,
   lead,
   image,
 }: {
-  eyebrow: ReactNode;
   title: ReactNode;
   lead?: ReactNode;
   image?: StaticImageData;
@@ -67,8 +65,7 @@ export function PageHero({
       ) : null}
       <div className="container-wide relative z-10 grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-end">
         <div>
-          <p className="eyebrow">{eyebrow}</p>
-          <h1 className="display-xl mt-5">{title}</h1>
+          <h1 className="display-xl">{title}</h1>
         </div>
         {lead ? (
           <p className="max-w-xl text-lg leading-relaxed text-primary-foreground">{lead}</p>
