@@ -89,14 +89,27 @@ export const servicesIntro = {
 };
 
 export const services: {
+  slug: string;
   number: string;
   title: L;
   body: L;
+  long: L<string[]>;
   deliverables: L<string[]>;
 }[] = [
   {
     number: "01",
+    slug: "concept-design",
     title: { en: "Concept Design", fr: "Conception du concept" },
+    long: {
+      en: [
+        "Every project begins as a conversation about how a space should be used — and what it should feel like. In the concept stage we test that ambition against the realities of the site: orientation, access, climate, budget and the planning rules that govern it. Sketches, massing studies and feasibility analysis turn an intention into a direction.",
+        "We treat the concept phase as a decision-making tool, not a formality. Clients receive a clear design direction, a realistic assessment of what the site can support, and visualization samples that make the proposal easy to evaluate before any technical work begins.",
+      ],
+      fr: [
+        "Chaque projet commence par une conversation sur l'usage d'un espace — et sur ce qu'il doit inspirer. Dès la phase de concept, nous confrontons cette ambition aux réalités du site : orientation, accès, climat, budget et règles d'urbanisme. Esquisses, études de volumes et analyses de faisabilité transforment une intention en direction claire.",
+        "Nous considérons la phase de concept comme un outil d'aide à la décision, non comme une formalité. Le client reçoit une direction de conception nette, une évaluation réaliste du potentiel du site et des échantillons de visualisation qui rendent la proposition facile à évaluer avant tout travail technique.",
+      ],
+    },
     body: {
       en: "Exploring ideas through sketches, massing studies, and feasibility analysis to shape the project's foundation.",
       fr: "Explorer les idées par l'esquisse, l'étude des volumes et l'analyse de faisabilité pour poser les bases du projet.",
@@ -118,7 +131,18 @@ export const services: {
   },
   {
     number: "02",
+    slug: "layout-plans",
     title: { en: "Layout & Plans", fr: "Plans et aménagements" },
+    long: {
+      en: [
+        "Once the concept is agreed, we develop it into drawings a builder can actually work from: floor plans, sections, elevations, landscape layouts and construction details, coordinated so that structure, services and finishes never contradict one another on site.",
+        "Our documentation is prepared for real construction conditions — local materials, available skills and phased budgets. Because we supervise our own projects, we know where drawings typically fail during construction, and we design our document sets to prevent exactly those failures.",
+      ],
+      fr: [
+        "Une fois le concept validé, nous le développons en plans directement exploitables par les entreprises : plans d'étage, coupes, façades, aménagements paysagers et détails d'exécution, coordonnés pour que structure, technique et finitions ne se contredisent jamais sur le chantier.",
+        "Notre documentation est préparée pour des conditions de chantier réelles — matériaux locaux, compétences disponibles et budgets échelonnés. Comme nous supervisons nos propres projets, nous savons où les plans échouent habituellement pendant la construction, et nos dossiers sont conçus précisément pour éviter ces échecs.",
+      ],
+    },
     body: {
       en: "Floor plans, sections, elevations, landscape and construction details — the technical backbone of every project.",
       fr: "Plans, coupes, façades, paysage et détails d'exécution — la colonne vertébrale technique de chaque projet.",
@@ -140,7 +164,18 @@ export const services: {
   },
   {
     number: "03",
+    slug: "visualization",
     title: { en: "3D Visualization & Walkthroughs", fr: "Visualisation 3D et visites virtuelles" },
+    long: {
+      en: [
+        "Visualization is how decisions get made. Photorealistic exterior and interior renders, VR-ready 360° experiences and animated walkthroughs let a client — or an investor, or a planning authority — understand a proposal before a single block is laid.",
+        "We build our visuals from the same model as the working drawings, so what you approve is what gets built. Renders can be tailored for marketing launches, investor presentations or permit applications, and delivered at any required resolution.",
+      ],
+      fr: [
+        "La visualisation, c'est ainsi que les décisions se prennent. Rendus photoréalistes extérieurs et intérieurs, expériences 360° compatibles VR et visites animées permettent à un client — ou à un investisseur, ou à une autorité — de comprendre une proposition avant la pose du premier bloc.",
+        "Nos visuels sont produits à partir du même modèle que les plans d'exécution : ce que vous approuvez est ce qui sera construit. Les rendus peuvent être adaptés aux lancements marketing, présentations aux investisseurs ou demandes de permis, et livrés à la résolution souhaitée.",
+      ],
+    },
     body: {
       en: "Photorealistic renders, virtual tours and animations. See it before it's built.",
       fr: "Rendus photoréalistes, visites virtuelles et animations. Voir avant de construire.",
@@ -152,7 +187,18 @@ export const services: {
   },
   {
     number: "04",
+    slug: "supervision",
     title: { en: "Project Supervision", fr: "Supervision de chantier" },
+    long: {
+      en: [
+        "A good set of drawings is only the beginning. On site, we act as the design's custodian: monitoring progress, checking workmanship against the documents, resolving conflicts between disciplines, and keeping the programme honest.",
+        "Clients receive structured site reports with photographic documentation, so they always know what has been built, what it cost, and what comes next. When conditions on site demand changes, we assess the consequences for design, budget and schedule before anything is altered.",
+      ],
+      fr: [
+        "Un bon dossier de plans n'est que le début. Sur le chantier, nous garantissons l'intégrité du projet : suivi de l'avancement, contrôle de la qualité par rapport aux documents, résolution des conflits entre corps de métier et respect du planning.",
+        "Le client reçoit des rapports de chantier structurés avec documentation photographique : il sait toujours ce qui a été construit, ce que cela a coûté et ce qui suit. Lorsque les conditions du chantier exigent des changements, nous évaluons leurs conséquences sur la conception, le budget et le délai avant toute modification.",
+      ],
+    },
     body: {
       en: "Site visits, quality control and timeline management. Ensuring the design is built right.",
       fr: "Visites de chantier, contrôle qualité et gestion des délais. Garantir que le projet est bien construit.",
@@ -176,7 +222,18 @@ export const services: {
   },
   {
     number: "05",
+    slug: "contract-management",
     title: { en: "Contract Management", fr: "Gestion des contrats" },
+    long: {
+      en: [
+        "Construction involves many contracts, and the terms decided before work starts determine how disputes, delays and variations are handled later. We prepare tender documents, support contractor selection, and administer the contract through to completion.",
+        "Our role is to keep the commercial side of a project as organised as the design: transparent progress and payment monitoring, disciplined management of change orders, and compliance reporting the client can rely on — whether they are on site or on another continent.",
+      ],
+      fr: [
+        "La construction implique de nombreux contrats, et les clauses fixées avant le démarrage déterminent la manière dont litiges, retards et avenants seront gérés ensuite. Nous préparons les dossiers d'appel d'offres, accompagnons la sélection des entreprises et administrons le contrat jusqu'à la réception.",
+        "Notre rôle est de garder le volet commercial aussi organisé que la conception : suivi transparent de l'avancement et des paiements, gestion rigoureuse des avenants et rapports de conformité fiables — que le client soit sur place ou sur un autre continent.",
+      ],
+    },
     body: {
       en: "Tender documents, contractor selection, budget management and compliance.",
       fr: "Dossiers d'appel d'offres, sélection des entreprises, gestion budgétaire et conformité.",
