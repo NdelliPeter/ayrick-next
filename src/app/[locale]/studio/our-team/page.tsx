@@ -4,7 +4,7 @@ import type { StaticImageData } from "next/image";
 import { setRequestLocale } from "next-intl/server";
 
 import { ASPECT_RATIOS, ImagePlaceholder } from "@/components/Placeholder";
-import { Section } from "@/components/Section";
+import { PageHero, Section } from "@/components/Section";
 import { studio } from "@/content/site";
 import type { Locale } from "@/i18n/routing";
 import { pick } from "@/lib/content";
@@ -49,14 +49,9 @@ export default async function OurTeamPage({ params }: { params: Promise<{ locale
 
   return (
     <>
-      <section className="border-b border-primary-foreground/12 bg-navy-deep py-20 text-primary-foreground md:py-24">
-        <div className="container-wide">
-          <p className="eyebrow">{t(studio.leadershipTitle)}</p>
-          <h1 className="display-xl mt-4">
-            {t({ en: "The minds shaping Ayrick.", fr: "Les esprits qui façonnent Ayrick." })}
-          </h1>
-        </div>
-      </section>
+      <PageHero
+        title={t({ en: "The minds shaping Ayrick.", fr: "Les esprits qui façonnent Ayrick." })}
+      />
 
       <Section>
         <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">

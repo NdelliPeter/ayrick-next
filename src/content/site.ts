@@ -320,8 +320,8 @@ export const faqs: { q: L; a: L }[] = [
 export const studio = {
   heroEyebrow: { en: "About Ayrick", fr: "À propos d'Ayrick" },
   heroTitle: {
-    en: "Improving the quality of life through better architecture.",
-    fr: "Améliorer la qualité de vie par une meilleure architecture.",
+    en: "Architecture for a better life.",
+    fr: "Une architecture pour mieux vivre.",
   },
   storyTitle: { en: "Our story", fr: "Notre histoire" },
   story: {

@@ -13,11 +13,13 @@ import { pick } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import journalMinimalismVillaDesign from "@/assets/journal-minimalism-villa-design.jpg";
+import journalDesigningWithTheClimate from "@/assets/journal-designing-with-the-climate.jpg";
 
 // Real lead photography is only available for some articles so far; the rest
 // keep the placeholder until matching images are sourced.
 const JOURNAL_LEAD_IMAGES: Record<string, StaticImageData> = {
   "minimalism-in-villa-design": journalMinimalismVillaDesign,
+  "designing-with-the-climate": journalDesigningWithTheClimate,
 };
 
 export function generateStaticParams() {
@@ -80,7 +82,7 @@ export default async function ArticlePage({
       />
 
       <section className="border-b border-primary-foreground/12 bg-navy-deep py-20 text-primary-foreground md:py-24">
-        <div className="container-wide max-w-4xl">
+        <div className="container-wide">
           <Link
             href="/journal"
             className="label-meta text-primary-foreground/50 hover:text-primary-foreground"
@@ -100,22 +102,20 @@ export default async function ArticlePage({
       </section>
 
       <Section>
-        <div className="mx-auto max-w-[80%]">
-          {leadImage ? (
-            <Image
-              src={leadImage}
-              alt={entry.title.en}
-              className={cn(ASPECT_RATIOS.wide, "w-full object-cover")}
-            />
-          ) : (
-            <ImagePlaceholder label={`${entry.title.en} — Lead image`} ratio="wide" />
-          )}
-          <p className="mt-10 text-xl leading-relaxed">{t(entry.excerpt)}</p>
-          <div className="mt-8 space-y-6 text-base leading-relaxed text-muted-foreground">
-            {t(entry.body).map((p) => (
-              <p key={p}>{p}</p>
-            ))}
-          </div>
+        {leadImage ? (
+          <Image
+            src={leadImage}
+            alt={entry.title.en}
+            className={cn(ASPECT_RATIOS.wide, "w-full object-cover")}
+          />
+        ) : (
+          <ImagePlaceholder label={`${entry.title.en} — Lead image`} ratio="wide" />
+        )}
+        <p className="mt-10 text-xl leading-relaxed">{t(entry.excerpt)}</p>
+        <div className="mt-8 space-y-6 text-base leading-relaxed text-muted-foreground">
+          {t(entry.body).map((p) => (
+            <p key={p}>{p}</p>
+          ))}
         </div>
       </Section>
     </>

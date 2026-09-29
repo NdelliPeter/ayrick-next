@@ -56,7 +56,7 @@ export function PageHero({
   image?: StaticImageData;
 }) {
   return (
-    <section className="relative overflow-hidden border-b border-primary-foreground/12 bg-navy-deep py-24 text-primary-foreground md:py-32">
+    <section className="relative flex min-h-[22rem] flex-col justify-end overflow-hidden border-b border-primary-foreground/12 bg-navy-deep py-16 text-primary-foreground md:min-h-[26rem] md:py-20">
       {image ? (
         <>
           <Image src={image} alt="" fill priority className="object-cover opacity-70" />
@@ -65,10 +65,12 @@ export function PageHero({
       ) : null}
       <div className="container-wide relative z-10 grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-end">
         <div>
-          <h1 className="display-xl">{title}</h1>
+          <h1 className="display-xl line-clamp-2">{title}</h1>
         </div>
         {lead ? (
-          <p className="max-w-xl text-lg leading-relaxed text-primary-foreground">{lead}</p>
+          <p className="line-clamp-3 max-w-xl text-lg leading-relaxed text-primary-foreground">
+            {lead}
+          </p>
         ) : null}
       </div>
     </section>

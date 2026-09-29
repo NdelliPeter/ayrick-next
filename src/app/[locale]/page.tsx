@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 
+import { HeroSlider } from "@/components/HeroSlider";
 import { ASPECT_RATIOS } from "@/components/Placeholder";
 import { ProjectTile } from "@/components/ProjectCard";
 import { Section, SectionHead } from "@/components/Section";
@@ -14,6 +15,16 @@ import { cn } from "@/lib/utils";
 import homeHero from "@/assets/home-hero.jpg";
 import practiceSiteVisit from "@/assets/practice-site-visit.jpg";
 import homeClientPortalPreview from "@/assets/home-client-portal-preview.jpg";
+import commercialComplexFreetownHero from "@/assets/projects-curated/commercial-complex-freetown/hero.jpg";
+import familyHouseAburiHero from "@/assets/projects-curated/family-house-aburi/hero.jpg";
+import villaPortlandUsHero from "@/assets/projects-curated/villa-portland-us/hero.jpg";
+
+const HOME_HERO_IMAGES = [
+  homeHero,
+  commercialComplexFreetownHero,
+  familyHouseAburiHero,
+  villaPortlandUsHero,
+];
 
 export async function generateMetadata({
   params,
@@ -49,8 +60,8 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-navy-deep text-primary-foreground">
-        <Image src={homeHero} alt="" fill priority className="object-cover opacity-30" />
+      <section className="relative overflow-hidden bg-navy-deep text-primary-foreground">
+        <HeroSlider images={HOME_HERO_IMAGES} />
         <div className="container-wide relative z-10 grid gap-12 py-28 md:py-40 lg:grid-cols-[1.35fr_1fr] lg:items-end">
           <div>
             <p className="eyebrow">{t(home.heroEyebrow)}</p>
