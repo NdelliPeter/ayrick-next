@@ -36,6 +36,8 @@ export interface Project {
   heroLabel: string;
   /** 5–10 supporting gallery image placeholders. */
   gallery: string[];
+  /** Service slugs this project demonstrates — powers related projects on service pages. */
+  services?: string[];
   featured?: boolean;
 }
 
@@ -45,6 +47,7 @@ const g = (name: string, n: number) =>
 export const projects: Project[] = [
   {
     slug: "meridian-tower",
+    services: ["concept-design", "layout-plans", "visualization", "supervision", "contract-management"],
     name: "Meridian Tower",
     category: "Commercial",
     location: "Rotterdam, Netherlands",
@@ -81,6 +84,7 @@ export const projects: Project[] = [
   },
   {
     slug: "kasai-civic-library",
+    services: ["concept-design", "layout-plans", "supervision"],
     name: "Kasai Civic Library",
     category: "Public",
     location: "Kinshasa, DR Congo",
@@ -117,6 +121,7 @@ export const projects: Project[] = [
   },
   {
     slug: "atelier-house-nine",
+    services: ["concept-design", "layout-plans", "visualization"],
     name: "Atelier House Nine",
     category: "Residential",
     location: "Lisbon, Portugal",
@@ -153,6 +158,7 @@ export const projects: Project[] = [
   },
   {
     slug: "north-quay-exchange",
+    services: ["concept-design", "layout-plans", "visualization"],
     name: "North Quay Exchange",
     category: "Mixed-Use",
     location: "Hamburg, Germany",
@@ -189,6 +195,7 @@ export const projects: Project[] = [
   },
   {
     slug: "hotel-sable",
+    services: ["concept-design", "visualization", "supervision"],
     name: "Hôtel Sablé",
     category: "Hospitality",
     location: "Marrakech, Morocco",
@@ -224,6 +231,7 @@ export const projects: Project[] = [
   },
   {
     slug: "granite-line-transit-hub",
+    services: ["concept-design", "layout-plans", "contract-management"],
     name: "Granite Line Transit Hub",
     category: "Public",
     location: "Montréal, Canada",
@@ -259,6 +267,7 @@ export const projects: Project[] = [
   },
   {
     slug: "vellore-works",
+    services: ["layout-plans", "supervision", "contract-management"],
     name: "Vellore Works",
     category: "Commercial",
     location: "Chennai, India",
@@ -294,6 +303,7 @@ export const projects: Project[] = [
   },
   {
     slug: "cedar-row-housing",
+    services: ["concept-design", "layout-plans", "visualization"],
     name: "Cedar Row Housing",
     category: "Residential",
     location: "Copenhagen, Denmark",
@@ -329,6 +339,7 @@ export const projects: Project[] = [
   },
   {
     slug: "salt-flats-retreat",
+    services: ["concept-design", "visualization", "supervision"],
     name: "Salt Flats Retreat",
     category: "Hospitality",
     location: "Uyuni, Bolivia",
@@ -364,6 +375,7 @@ export const projects: Project[] = [
   },
   {
     slug: "the-foundry-quarter",
+    services: ["concept-design", "layout-plans", "contract-management"],
     name: "The Foundry Quarter",
     category: "Mixed-Use",
     location: "Manchester, United Kingdom",
@@ -399,6 +411,7 @@ export const projects: Project[] = [
   },
   {
     slug: "escarpment-research-station",
+    services: ["concept-design", "supervision", "contract-management"],
     name: "Escarpment Research Station",
     category: "Public",
     location: "Windhoek, Namibia",
@@ -434,6 +447,7 @@ export const projects: Project[] = [
   },
   {
     slug: "harbour-point-residences",
+    services: ["layout-plans", "visualization", "supervision"],
     name: "Harbour Point Residences",
     category: "Residential",
     location: "Singapore",
