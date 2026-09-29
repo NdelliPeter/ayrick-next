@@ -122,11 +122,18 @@ function Index() {
         <SectionHead eyebrow={t(home.servicesEyebrow)} title={t(home.servicesTitle)} />
         <div className="mt-14 grid border-t border-rule md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
-            <div key={s.number} className="border-b border-rule px-0 py-10 md:pr-10 lg:[&:not(:nth-child(3n+1))]:border-l lg:[&:not(:nth-child(3n+1))]:pl-10">
+            <Link
+              key={s.number}
+              to="/services/$slug"
+              params={{ slug: s.slug }}
+              className="group block border-b border-rule px-0 py-10 md:pr-10 lg:[&:not(:nth-child(3n+1))]:border-l lg:[&:not(:nth-child(3n+1))]:pl-10"
+            >
               <span className="label-meta text-accent">{s.number}</span>
-              <h3 className="mt-4 font-display text-2xl">{t(s.title)}</h3>
+              <h3 className="mt-4 font-display text-2xl transition-colors group-hover:text-accent">
+                {t(s.title)}
+              </h3>
               <p className="mt-3 text-muted-foreground">{t(s.body)}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <Link to="/services" className="link-underline label-meta mt-10 inline-block text-foreground">

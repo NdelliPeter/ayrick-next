@@ -45,7 +45,15 @@ function ServicesPage() {
             <ImagePlaceholder ratio="landscape" label={`Service ${s.number} — ${s.title.en}`} />
             <div>
               <span className="label-meta text-accent">{s.number}</span>
-              <h2 className="display-lg mt-4">{t(s.title)}</h2>
+              <h2 className="display-lg mt-4">
+                <Link
+                  to="/services/$slug"
+                  params={{ slug: s.slug }}
+                  className="transition-colors hover:text-accent"
+                >
+                  {t(s.title)}
+                </Link>
+              </h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{t(s.body)}</p>
               <ul className="mt-8 border-t border-rule">
                 {t(s.deliverables).map((d) => (
@@ -54,6 +62,13 @@ function ServicesPage() {
                   </li>
                 ))}
               </ul>
+              <Link
+                to="/services/$slug"
+                params={{ slug: s.slug }}
+                className="link-underline label-meta mt-8 inline-block text-foreground"
+              >
+                {t({ en: "Explore this service", fr: "Découvrir cette prestation" })} →
+              </Link>
             </div>
           </div>
         </Section>
