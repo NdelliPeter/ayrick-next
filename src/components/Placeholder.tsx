@@ -57,8 +57,18 @@ export function ImagePlaceholder({
 }
 
 /** Ayrick logo mark. Transparent background — renders correctly on both light and dark sections. */
-export function LogoWordmark({ className }: { className?: string }) {
+export function LogoWordmark({
+  className,
+  variant,
+}: {
+  className?: string;
+  variant?: "light" | "dark";
+}) {
   return (
-    <img src={ayrickLogo} alt="Ayrick Architecture" className={cn("h-14 w-auto", className)} />
+    <img
+      src={ayrickLogo}
+      alt="Ayrick Architecture"
+      className={cn("h-14 w-auto", variant === "light" && "brightness-125", className)}
+    />
   );
 }
