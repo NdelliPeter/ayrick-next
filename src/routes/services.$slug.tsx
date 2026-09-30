@@ -43,7 +43,7 @@ function ServiceDetail() {
 
   const related = projects.filter((p) => p.services?.includes(service.slug));
   const idx = services.findIndex((s) => s.slug === service.slug);
-  const next = services[(idx + 1) % services.length];
+  const next = services[(idx + 1) % services.length] ?? service;
   const paragraphs = t(service.long);
 
   return (
