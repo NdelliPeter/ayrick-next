@@ -65,17 +65,22 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
       {services.map((s, i) => (
         <Section key={s.number}>
-          <div
-            className={`grid gap-12 lg:grid-cols-2 lg:items-center ${i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}
+          <Link
+            href={`/services/${s.slug}`}
+            className={`group grid gap-12 lg:grid-cols-2 lg:items-center ${i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}
           >
-            <Image
-              src={SERVICE_IMAGES[s.number]!}
-              alt={s.title.en}
-              className="aspect-[4/3] w-full object-cover"
-            />
+            <div className="overflow-hidden">
+              <Image
+                src={SERVICE_IMAGES[s.number]!}
+                alt={s.title.en}
+                className="aspect-[4/3] w-full object-cover transition-opacity group-hover:opacity-85"
+              />
+            </div>
             <div>
               <span className="label-meta text-primary">{s.number}</span>
-              <h2 className="display-lg mt-4">{t(s.title)}</h2>
+              <h2 className="display-lg mt-4 transition-colors group-hover:text-primary">
+                {t(s.title)}
+              </h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{t(s.body)}</p>
               <ul className="mt-8 border-t border-rule">
                 {t(s.deliverables).map((d) => (
@@ -84,8 +89,12 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                   </li>
                 ))}
               </ul>
+              <span className="mt-8 inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-primary">
+                {t({ en: "Learn more", fr: "En savoir plus" })}
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </span>
             </div>
-          </div>
+          </Link>
         </Section>
       ))}
 

@@ -13,20 +13,12 @@ import type { L } from "@/lib/content";
  * content-review pass with Ayrick before public launch.
  */
 
-export const CATEGORIES = [
-  "Residential",
-  "Commercial",
-  "Hospitality",
-  "Public",
-  "Mixed-Use",
-] as const;
+export const CATEGORIES = ["Residential", "Public", "Mixed-Use"] as const;
 export type Category = (typeof CATEGORIES)[number];
 
 export const CATEGORY_LABELS: Record<Category | "All", L> = {
   All: { en: "All Projects", fr: "Tous les projets" },
   Residential: { en: "Residential", fr: "Résidentiel" },
-  Commercial: { en: "Commercial", fr: "Commercial" },
-  Hospitality: { en: "Hospitality", fr: "Hôtellerie" },
   Public: { en: "Public", fr: "Public" },
   "Mixed-Use": { en: "Mixed-Use", fr: "Usage mixte" },
 };
