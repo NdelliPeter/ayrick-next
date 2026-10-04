@@ -29,7 +29,7 @@ export const ui = {
   next: { en: "Next project", fr: "Projet suivant" },
   previous: { en: "Previous project", fr: "Projet précédent" },
   backToServices: { en: "Back to services", fr: "Retour aux services" },
-  nextService: { en: "Next service", fr: "Service suivant" },
+  otherServices: { en: "Other services", fr: "Autres services" },
   relatedProjects: { en: "Related projects", fr: "Projets liés" },
 } satisfies Record<string, L>;
 

@@ -4,7 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 
 import { ProjectTile } from "@/components/ProjectCard";
 import { Section } from "@/components/Section";
-import { featuredProjects } from "@/content/projects";
+import { projects } from "@/content/projects";
 import { services, ui } from "@/content/site";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
@@ -58,9 +58,12 @@ export default async function ServiceDetailPage({
   if (!service) notFound();
 
   const t = <T,>(v: { en: T; fr: T }) => pick(locale, v);
-  const idx = services.findIndex((s) => s.slug === service.slug);
-  const nextService = services[(idx + 1) % services.length]!;
-  const related = featuredProjects.slice(0, 4);
+  const otherServices = services.filter((s) => s.slug !== service.slug);
+  const serviceIndex = services.findIndex((s) => s.slug === service.slug);
+  const related = Array.from(
+    { length: 4 },
+    (_, i) => projects[(serviceIndex * 4 + i) % projects.length]!,
+  );
 
   return (
     <>
@@ -115,14 +118,26 @@ export default async function ServiceDetailPage({
         </div>
       </Section>
 
-      <section className="bg-navy-deep py-16 text-primary-foreground">
+      <section className="bg-navy-deep py-16 text-primary-foreground md:py-20">
         <div className="container-wide">
-          <Link href={`/services/${nextService.slug}`} className="group inline-block">
-            <p className="label-meta text-primary-foreground/45">{t(ui.nextService)} →</p>
-            <span className="display-lg mt-4 block transition-colors group-hover:text-primary">
-              {t(nextService.title)}
-            </span>
-          </Link>
+          <p className="label-meta text-primary-foreground/50">{t(ui.otherServices)}</p>
+          <div className="mt-8 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+            {otherServices.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/services/${s.slug}`}
+                className="group border-t border-primary-foreground/12 pt-6"
+              >
+                <span className="label-meta text-primary">{s.number}</span>
+                <h3 className="mt-3 font-display text-2xl transition-colors group-hover:text-primary md:text-3xl">
+                  {t(s.title)}
+                </h3>
+                <span className="mt-3 inline-block text-primary-foreground/50 transition-transform group-hover:translate-x-1 group-hover:text-primary">
+                  →
+                </span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
     </>
