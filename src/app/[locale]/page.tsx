@@ -145,14 +145,21 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
         <SectionHead eyebrow={t(home.servicesEyebrow)} title={t(home.servicesTitle)} />
         <div className="mt-14 grid border-t border-rule md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
-            <div
+            <Link
               key={s.number}
-              className="border-b border-rule px-0 py-10 md:pr-10 lg:[&:not(:nth-child(3n+1))]:border-l lg:[&:not(:nth-child(3n+1))]:pl-10"
+              href={`/services/${s.slug}`}
+              className="group block border-b border-rule px-0 py-10 md:pr-10 lg:[&:not(:nth-child(3n+1))]:border-l lg:[&:not(:nth-child(3n+1))]:pl-10"
             >
               <span className="label-meta text-primary">{s.number}</span>
-              <h3 className="mt-4 font-display text-2xl">{t(s.title)}</h3>
+              <h3 className="mt-4 font-display text-2xl transition-colors group-hover:text-primary">
+                {t(s.title)}
+              </h3>
               <p className="mt-3 text-muted-foreground">{t(s.body)}</p>
-            </div>
+              <span className="mt-5 inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-primary">
+                {t({ en: "Learn more", fr: "En savoir plus" })}
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </span>
+            </Link>
           ))}
         </div>
         <Link
