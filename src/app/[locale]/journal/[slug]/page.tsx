@@ -12,7 +12,7 @@ import type { Locale } from "@/i18n/routing";
 import { pick } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import journalMinimalismVillaDesign from "@/assets/project/4 bedroom villa Portland main US 2022/Render02.jpg";
+import journalMinimalismVillaDesign from "@/assets/journal-minimalism-villa-design.jpg";
 import journalDesigningWithTheClimate from "@/assets/journal-designing-with-the-climate.jpg";
 
 // Real lead photography is only available for some articles so far; the rest

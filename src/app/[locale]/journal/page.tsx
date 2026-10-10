@@ -7,7 +7,7 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pick } from "@/lib/content";
 import { SITE_URL } from "@/lib/site";
-import journalHero from "@/assets/project/family house 3 triplex houses Aburi 2021/G.jpg";
+import journalHero from "@/assets/journal-hero.jpg";
 
 export async function generateMetadata({
   params,
