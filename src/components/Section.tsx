@@ -8,16 +8,19 @@ export function Section({
   children,
   className,
   dark,
+  tint,
 }: {
   children: ReactNode;
   className?: string;
   dark?: boolean;
+  tint?: boolean;
 }) {
   return (
     <section
       className={cn(
         "border-b border-rule py-20 md:py-28",
         dark && "border-primary-foreground/12 bg-navy-deep text-primary-foreground",
+        tint && "bg-accent-soft",
         className,
       )}
     >
@@ -56,7 +59,7 @@ export function PageHero({
   image?: StaticImageData;
 }) {
   return (
-    <section className="relative flex min-h-[22rem] flex-col justify-end overflow-hidden border-b border-primary-foreground/12 bg-navy-deep py-16 text-primary-foreground md:min-h-[26rem] md:py-20">
+    <section className="relative flex min-h-[60dvh] flex-col justify-end overflow-hidden border-b border-primary-foreground/12 bg-navy-deep py-16 text-primary-foreground md:py-20">
       {image ? (
         <>
           <Image src={image} alt="" fill priority className="object-cover opacity-70" />

@@ -53,7 +53,7 @@ export default async function OurTeamPage({ params }: { params: Promise<{ locale
         title={t({ en: "The minds shaping Ayrick.", fr: "Les esprits qui façonnent Ayrick." })}
       />
 
-      <Section>
+      <Section tint>
         <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {studio.leadership.map((person) => (
             <div key={person.name}>

@@ -13,6 +13,7 @@ import studioHero from "@/assets/studio-hero.jpg";
 import studioAccraWorkspace from "@/assets/studio-accra-workspace.jpg";
 import studioDesignReview from "@/assets/studio-design-review.jpg";
 import studioSiteSupervision from "@/assets/studio-site-supervision.jpg";
+import studioDesignPhilosophy from "@/assets/projects-curated/interior-accra/gallery-02.jpg";
 
 export async function generateMetadata({
   params,
@@ -79,17 +80,26 @@ export default async function AboutUsPage({ params }: { params: Promise<{ locale
       </Section>
 
       <Section dark>
-        <SectionHead
-          eyebrow={t(studio.missionTitle)}
-          title={t(studio.mission)}
-          className="max-w-4xl"
-        />
-        <p className="mt-8 max-w-3xl text-lg leading-relaxed text-primary-foreground/65">
-          {t(studio.missionBody)}
-        </p>
+        <div className="grid gap-14 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+          <div>
+            <SectionHead
+              eyebrow={t(studio.missionTitle)}
+              title={t(studio.mission)}
+              className="max-w-4xl"
+            />
+            <p className="mt-8 max-w-3xl text-lg leading-relaxed text-primary-foreground/65">
+              {t(studio.missionBody)}
+            </p>
+          </div>
+          <Image
+            src={studioDesignPhilosophy}
+            alt="Interior design detail — Ayrick Makers Group"
+            className={cn(ASPECT_RATIOS.square, "w-full object-cover")}
+          />
+        </div>
       </Section>
 
-      <Section>
+      <Section tint>
         <SectionHead
           eyebrow={t(studio.valuesTitle)}
           title={t({ en: "Our capabilities", fr: "Nos compétences" })}
@@ -119,27 +129,27 @@ export default async function AboutUsPage({ params }: { params: Promise<{ locale
         </div>
       </Section>
 
-      <Section>
+      <Section dark>
         <div className="grid gap-14 lg:grid-cols-2">
           <div>
-            <p className="label-meta">{t(studio.credentialsTitle)}</p>
-            <div className="mt-8 border-t border-rule">
+            <p className="label-meta text-primary-foreground/50">{t(studio.credentialsTitle)}</p>
+            <div className="mt-8 border-t border-primary-foreground/12">
               {studio.credentials.map((c) => (
                 <div
                   key={c.label.en}
-                  className="grid gap-1 border-b border-rule py-5 sm:grid-cols-2 sm:items-baseline"
+                  className="grid gap-1 border-b border-primary-foreground/12 py-5 sm:grid-cols-2 sm:items-baseline"
                 >
-                  <span className="label-meta">{t(c.label)}</span>
+                  <span className="label-meta text-primary-foreground/50">{t(c.label)}</span>
                   <span className="font-display text-xl">{t(c.value)}</span>
                 </div>
               ))}
             </div>
           </div>
           <div>
-            <p className="label-meta">{t(studio.certificationsTitle)}</p>
-            <ul className="mt-8 border-t border-rule">
+            <p className="label-meta text-primary-foreground/50">{t(studio.certificationsTitle)}</p>
+            <ul className="mt-8 border-t border-primary-foreground/12">
               {studio.certifications.map((c) => (
-                <li key={c} className="border-b border-rule py-3.5 text-sm">
+                <li key={c} className="border-b border-primary-foreground/12 py-3.5 text-sm">
                   {c}
                 </li>
               ))}
@@ -148,7 +158,7 @@ export default async function AboutUsPage({ params }: { params: Promise<{ locale
         </div>
       </Section>
 
-      <Section>
+      <Section tint>
         <SectionHead eyebrow={t(studio.presenceTitle)} title={t(studio.presenceBody)} />
         <div className="mt-12 border-t border-rule">
           {studio.offices.map((o) => (

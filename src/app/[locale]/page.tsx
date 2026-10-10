@@ -117,7 +117,7 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
       </Section>
 
       {/* Positioning */}
-      <Section>
+      <Section dark>
         <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
           <Image
             src={practiceSiteVisit}
@@ -127,12 +127,12 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
           <div>
             <p className="eyebrow">{t(home.positionEyebrow)}</p>
             <h2 className="display-lg mt-4">{t(home.positionTitle)}</h2>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-6 text-lg leading-relaxed text-primary-foreground/65">
               {t(home.positionBody)}
             </p>
             <Link
               href="/studio/about-us"
-              className="link-underline label-meta mt-8 inline-block text-foreground"
+              className="link-underline label-meta mt-8 inline-block text-primary-foreground"
             >
               {t({ en: "About the studio", fr: "À propos du studio" })} →
             </Link>
@@ -141,7 +141,7 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
       </Section>
 
       {/* Services */}
-      <Section>
+      <Section tint>
         <SectionHead eyebrow={t(home.servicesEyebrow)} title={t(home.servicesTitle)} />
         <div className="mt-14 grid border-t border-rule md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (

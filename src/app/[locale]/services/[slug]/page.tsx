@@ -109,7 +109,7 @@ export default async function ServiceDetailPage({
         </div>
       </Section>
 
-      <Section>
+      <Section tint>
         <p className="label-meta">{t(ui.relatedProjects)}</p>
         <div className="mt-8 grid gap-x-10 gap-y-16 md:grid-cols-2 lg:grid-cols-4">
           {related.map((p) => (

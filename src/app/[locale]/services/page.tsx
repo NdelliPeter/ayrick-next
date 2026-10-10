@@ -14,6 +14,7 @@ import { faqs, home, process, services, servicesIntro, ui } from "@/content/site
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pick } from "@/lib/content";
+import { cn } from "@/lib/utils";
 import servicesHero from "@/assets/services-hero.jpg";
 import serviceConceptDesign from "@/assets/service-concept-design.jpg";
 import serviceLayoutPlans from "@/assets/service-layout-plans.jpg";
@@ -63,42 +64,70 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
     <>
       <PageHero title={t(servicesIntro.title)} lead={t(servicesIntro.body)} image={servicesHero} />
 
-      {services.map((s, i) => (
-        <Section key={s.number}>
-          <Link
-            href={`/services/${s.slug}`}
-            className={`group grid gap-12 lg:grid-cols-2 lg:items-center ${i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}
-          >
-            <div className="overflow-hidden">
-              <Image
-                src={SERVICE_IMAGES[s.number]!}
-                alt={s.title.en}
-                className="aspect-[4/3] w-full object-cover transition-opacity group-hover:opacity-85"
-              />
-            </div>
-            <div>
-              <span className="label-meta text-primary">{s.number}</span>
-              <h2 className="display-lg mt-4 transition-colors group-hover:text-primary">
-                {t(s.title)}
-              </h2>
-              <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{t(s.body)}</p>
-              <ul className="mt-8 border-t border-rule">
-                {t(s.deliverables).map((d) => (
-                  <li key={d} className="border-b border-rule py-3.5 text-sm">
-                    {d}
-                  </li>
-                ))}
-              </ul>
-              <span className="mt-8 inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-primary">
-                {t({ en: "Learn more", fr: "En savoir plus" })}
-                <span className="transition-transform group-hover:translate-x-1">→</span>
-              </span>
-            </div>
-          </Link>
-        </Section>
-      ))}
+      {services.map((s, i) => {
+        const isDark = i % 3 === 1;
+        const isTint = i % 3 === 2;
+        return (
+          <Section key={s.number} dark={isDark} tint={isTint}>
+            <Link
+              href={`/services/${s.slug}`}
+              className={cn(
+                "group grid gap-12 lg:grid-cols-2 lg:items-center",
+                i % 2 === 1 && "lg:[&>*:first-child]:order-2",
+              )}
+            >
+              <div className="overflow-hidden">
+                <Image
+                  src={SERVICE_IMAGES[s.number]!}
+                  alt={s.title.en}
+                  className={cn(
+                    "aspect-[4/3] w-full object-cover transition-opacity group-hover:opacity-85",
+                    s.number === "05" && "object-top",
+                  )}
+                />
+              </div>
+              <div>
+                <span className="label-meta text-primary">{s.number}</span>
+                <h2 className="display-lg mt-4 transition-colors group-hover:text-primary">
+                  {t(s.title)}
+                </h2>
+                <p
+                  className={cn(
+                    "mt-5 text-lg leading-relaxed",
+                    isDark ? "text-primary-foreground/65" : "text-muted-foreground",
+                  )}
+                >
+                  {t(s.body)}
+                </p>
+                <ul
+                  className={cn(
+                    "mt-8 border-t",
+                    isDark ? "border-primary-foreground/12" : "border-rule",
+                  )}
+                >
+                  {t(s.deliverables).map((d) => (
+                    <li
+                      key={d}
+                      className={cn(
+                        "border-b py-3.5 text-sm",
+                        isDark ? "border-primary-foreground/12" : "border-rule",
+                      )}
+                    >
+                      {d}
+                    </li>
+                  ))}
+                </ul>
+                <span className="mt-8 inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-primary">
+                  {t({ en: "Learn more", fr: "En savoir plus" })}
+                  <span className="transition-transform group-hover:translate-x-1">→</span>
+                </span>
+              </div>
+            </Link>
+          </Section>
+        );
+      })}
 
-      <Section>
+      <Section tint>
         <SectionHead
           eyebrow={t({ en: "Process", fr: "Processus" })}
           title={t({ en: "How a project runs", fr: "Le déroulement d'un projet" })}

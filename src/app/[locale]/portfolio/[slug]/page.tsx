@@ -125,7 +125,7 @@ export default async function ProjectDetail({
         </div>
       </Section>
 
-      <Section>
+      <Section tint>
         <p className="label-meta">{t(ui.gallery)}</p>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
           {project.gallery.map((img, i) => (

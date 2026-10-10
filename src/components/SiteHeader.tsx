@@ -168,10 +168,10 @@ export function SiteHeader({ locale }: { locale: Locale }) {
       </div>
 
       {open && (
-        <div className="border-t border-rule bg-background lg:hidden">
+        <div className="fixed inset-x-0 top-[72px] z-40 h-[calc(100dvh-72px)] overflow-y-auto border-t border-primary-foreground/12 bg-navy-deep text-primary-foreground lg:hidden">
           <nav className="container-wide flex flex-col py-2">
             {nav.map((item) => (
-              <div key={item.to} className="border-b border-rule">
+              <div key={item.to} className="border-b border-primary-foreground/12">
                 <Link
                   href={item.to}
                   onClick={() => setOpen(false)}
@@ -186,7 +186,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                         key={sub.to}
                         href={sub.to}
                         onClick={() => setOpen(false)}
-                        className="label-meta py-2 text-muted-foreground"
+                        className="label-meta py-2 text-primary-foreground/60"
                       >
                         {pick(locale, sub.label)}
                       </Link>

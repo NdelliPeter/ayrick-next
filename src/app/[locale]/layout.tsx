@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Roboto } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
@@ -12,10 +12,10 @@ import { SITE_URL } from "@/lib/site";
 
 import "../globals.css";
 
-const roboto = Roboto({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["400", "500", "700", "900"],
-  variable: "--font-roboto",
+  weight: ["500", "600", "700"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
@@ -74,7 +74,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${roboto.variable} ${inter.variable}`}>
+    <html lang={locale} className={`${fraunces.variable} ${inter.variable}`}>
       <body>
         <NextIntlClientProvider locale={locale} messages={{}}>
           <div className="flex min-h-screen flex-col">
