@@ -106,7 +106,12 @@ export default async function ArticlePage({
           <Image
             src={leadImage}
             alt={entry.title.en}
-            className={cn(ASPECT_RATIOS.wide, "w-full object-cover")}
+            className={cn(
+              leadImage.height > leadImage.width
+                ? "aspect-[4/3] max-h-[560px] object-top"
+                : ASPECT_RATIOS.wide,
+              "w-full object-cover",
+            )}
           />
         ) : (
           <ImagePlaceholder label={`${entry.title.en} — Lead image`} ratio="wide" />

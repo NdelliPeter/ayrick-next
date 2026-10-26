@@ -39,7 +39,7 @@ export const home = {
     fr: "Ayrick Makers Group — Architecture et construction",
   },
   heroTitle: {
-    en: "Building spaces that matter.",
+    en: "Building Spaces That Matter.",
     fr: "Construire des espaces qui comptent.",
   },
   heroLead: {
@@ -85,7 +85,7 @@ export const home = {
 };
 
 export const servicesIntro = {
-  title: { en: "From Vision to Reality", fr: "De la vision à la réalité" },
+  title: { en: "From Vision To Reality", fr: "De la vision à la réalité" },
   body: {
     en: "We provide comprehensive architectural and construction services, turning ideas into functional, modern, and sustainable spaces. From concept design to project execution, we focus on quality, precision, and client satisfaction to deliver results that meet both aesthetic and practical needs.",
     fr: "Nous offrons des services complets d'architecture et de construction, transformant les idées en espaces fonctionnels, modernes et durables. De la conception à l'exécution, nous mettons l'accent sur la qualité, la précision et la satisfaction du client.",
@@ -106,7 +106,7 @@ export const services: {
   {
     number: "01",
     slug: "concept-design",
-    title: { en: "Concept Design", fr: "Conception du concept" },
+    title: { en: "Conceptual Design", fr: "Conception du concept" },
     body: {
       en: "Exploring ideas through sketches, massing studies, and feasibility analysis to shape the project's foundation.",
       fr: "Explorer les idées par l'esquisse, l'étude des volumes et l'analyse de faisabilité pour poser les bases du projet.",
@@ -140,41 +140,6 @@ export const services: {
   },
   {
     number: "02",
-    slug: "layout-plans",
-    title: { en: "Layout & Plans", fr: "Plans et aménagements" },
-    body: {
-      en: "Floor plans, sections, elevations, landscape and construction details — the technical backbone of every project.",
-      fr: "Plans, coupes, façades, paysage et détails d'exécution — la colonne vertébrale technique de chaque projet.",
-    },
-    detail: {
-      paragraphs: {
-        en: [
-          "Once the concept is agreed, we develop it into drawings a builder can actually work from: floor plans, sections, elevations, landscape layouts and construction details, coordinated so that structure, services and finishes never contradict one another on site.",
-          "Our documentation is prepared for real construction conditions — local materials, available skills and phased budgets. Because we supervise our own projects, we know where drawings typically fail during construction, and we design our document sets to prevent exactly those failures.",
-        ],
-        fr: [
-          "Once the concept is agreed, we develop it into drawings a builder can actually work from: floor plans, sections, elevations, landscape layouts and construction details, coordinated so that structure, services and finishes never contradict one another on site.",
-          "Our documentation is prepared for real construction conditions — local materials, available skills and phased budgets. Because we supervise our own projects, we know where drawings typically fail during construction, and we design our document sets to prevent exactly those failures.",
-        ],
-      },
-    },
-    deliverables: {
-      en: [
-        "Site analysis & design diagrams",
-        "Architectural concept development",
-        "Preliminary 2D layouts and floor plans",
-        "Complete architectural documentation",
-      ],
-      fr: [
-        "Analyse du site et diagrammes de conception",
-        "Développement du concept architectural",
-        "Plans et aménagements 2D préliminaires",
-        "Documentation architecturale complète",
-      ],
-    },
-  },
-  {
-    number: "03",
     slug: "visualization",
     title: { en: "3D Visualization & Walkthroughs", fr: "Visualisation 3D et visites virtuelles" },
     body: {
@@ -209,7 +174,7 @@ export const services: {
     },
   },
   {
-    number: "04",
+    number: "03",
     slug: "supervision",
     title: { en: "Project Supervision", fr: "Supervision de chantier" },
     body: {
@@ -246,7 +211,7 @@ export const services: {
     },
   },
   {
-    number: "05",
+    number: "04",
     slug: "contract-management",
     title: { en: "Contract Management", fr: "Gestion des contrats" },
     body: {
@@ -295,7 +260,7 @@ export const process: { step: string; title: L; body: L }[] = [
   },
   {
     step: "02",
-    title: { en: "Concept Design", fr: "Conception du concept" },
+    title: { en: "Conceptual Design", fr: "Conception du concept" },
     body: {
       en: "Architectural concept development — spatial ideas, massing and material direction take their first form.",
       fr: "Développement du concept architectural — idées spatiales, volumétrie et direction matérielle prennent forme.",
@@ -393,7 +358,7 @@ export const faqs: { q: L; a: L }[] = [
 export const studio = {
   heroEyebrow: { en: "About Ayrick", fr: "À propos d'Ayrick" },
   heroTitle: {
-    en: "Architecture for a better life.",
+    en: "Architecture For A Better Life.",
     fr: "Une architecture pour mieux vivre.",
   },
   storyTitle: { en: "Our story", fr: "Notre histoire" },
@@ -623,7 +588,7 @@ export const journal: {
 
 export const contact = {
   heroEyebrow: { en: "Contact", fr: "Contact" },
-  heroTitle: { en: "Bring your vision.", fr: "Apportez votre vision." },
+  heroTitle: { en: "Bring Your Vision.", fr: "Apportez votre vision." },
   heroLead: {
     en: "Let's talk about your vision and bring it to life.",
     fr: "Parlons de votre vision et donnons-lui vie.",

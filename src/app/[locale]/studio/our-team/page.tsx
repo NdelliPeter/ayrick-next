@@ -50,7 +50,7 @@ export default async function OurTeamPage({ params }: { params: Promise<{ locale
   return (
     <>
       <PageHero
-        title={t({ en: "The minds shaping Ayrick.", fr: "Les esprits qui façonnent Ayrick." })}
+        title={t({ en: "The Minds Shaping Ayrick.", fr: "Les esprits qui façonnent Ayrick." })}
       />
 
       <Section tint>

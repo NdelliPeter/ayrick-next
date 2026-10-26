@@ -128,18 +128,26 @@ export default async function ProjectDetail({
       <Section tint>
         <p className="label-meta">{t(ui.gallery)}</p>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {project.gallery.map((img, i) => (
-            <Image
-              key={img.src}
-              src={img}
-              alt={`${project.name} — ${i + 1}`}
-              className={cn(
-                i % 5 === 0 ? ASPECT_RATIOS.wide : ASPECT_RATIOS.landscape,
-                "w-full object-cover",
-                i % 5 === 0 && "md:col-span-2",
-              )}
-            />
-          ))}
+          {project.gallery.map((img, i) => {
+            const isPortrait = img.height > img.width;
+            const isWide = !isPortrait && i % 5 === 0;
+            return (
+              <Image
+                key={img.src}
+                src={img}
+                alt={`${project.name} — ${i + 1}`}
+                className={cn(
+                  isPortrait
+                    ? ASPECT_RATIOS.portrait
+                    : isWide
+                      ? ASPECT_RATIOS.wide
+                      : ASPECT_RATIOS.landscape,
+                  "w-full object-cover",
+                  isWide && "md:col-span-2",
+                )}
+              />
+            );
+          })}
         </div>
       </Section>
 

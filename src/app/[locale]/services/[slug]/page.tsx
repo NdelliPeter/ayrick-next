@@ -121,7 +121,7 @@ export default async function ServiceDetailPage({
       <section className="bg-navy-deep py-16 text-primary-foreground md:py-20">
         <div className="container-wide">
           <p className="label-meta text-primary-foreground/50">{t(ui.otherServices)}</p>
-          <div className="mt-8 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
             {otherServices.map((s) => (
               <Link
                 key={s.slug}

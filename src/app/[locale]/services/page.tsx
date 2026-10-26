@@ -17,17 +17,15 @@ import { pick } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import servicesHero from "@/assets/services-hero.jpg";
 import serviceConceptDesign from "@/assets/service-concept-design.jpg";
-import serviceLayoutPlans from "@/assets/service-layout-plans.jpg";
 import service3dVisualization from "@/assets/service-3d-visualization.jpg";
 import serviceProjectSupervision from "@/assets/service-project-supervision.jpg";
 import serviceContractManagement from "@/assets/service-contract-management.jpg";
 
 const SERVICE_IMAGES: Record<string, StaticImageData> = {
   "01": serviceConceptDesign,
-  "02": serviceLayoutPlans,
-  "03": service3dVisualization,
-  "04": serviceProjectSupervision,
-  "05": serviceContractManagement,
+  "02": service3dVisualization,
+  "03": serviceProjectSupervision,
+  "04": serviceContractManagement,
 };
 
 export async function generateMetadata({

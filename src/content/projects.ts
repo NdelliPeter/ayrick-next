@@ -126,6 +126,8 @@ import apartments3BlocksG2 from "@/assets/projects-curated/apartments-3-blocks-f
 
 // — Project: 4 Bedroom Duplex Villa (Iran) —
 import duplexVillaIran4bedHero from "@/assets/projects-curated/duplex-villa-iran-4bed/hero.jpg";
+import duplexVillaIran4bedG1 from "@/assets/projects-curated/duplex-villa-iran-4bed/gallery-01.jpg";
+import duplexVillaIran4bedG2 from "@/assets/projects-curated/duplex-villa-iran-4bed/gallery-02.jpg";
 
 // — Project: 4 Bedroom Duplex Villa, Appolonia —
 import duplexVillaAppolonia2024Hero from "@/assets/projects-curated/duplex-villa-appolonia-2024/hero.jpg";
@@ -135,13 +137,12 @@ import duplexVillaAppolonia2024G2 from "@/assets/projects-curated/duplex-villa-a
 // — Project: 4 Units, 4&5 Bedroom Duplex Villa, Devtraco —
 import duplexVillaDevtracoHero from "@/assets/projects-curated/duplex-villa-devtraco/hero.jpg";
 import duplexVillaDevtracoG1 from "@/assets/projects-curated/duplex-villa-devtraco/gallery-01.jpg";
+import duplexVillaDevtracoG2 from "@/assets/projects-curated/duplex-villa-devtraco/gallery-02.jpg";
+import duplexVillaDevtracoG3 from "@/assets/projects-curated/duplex-villa-devtraco/gallery-03.jpg";
 
 // — Project: 5 Bedroom Duplex Villa (Iran) —
 import duplexVillaIran5bedHero from "@/assets/projects-curated/duplex-villa-iran-5bed/hero.jpg";
-
-// — Project: Garden Villa —
-import gardenVillaHero from "@/assets/projects-curated/garden-villa/hero.jpg";
-import gardenVillaG1 from "@/assets/projects-curated/garden-villa/gallery-01.jpg";
+import duplexVillaIran5bedG1 from "@/assets/projects-curated/duplex-villa-iran-5bed/gallery-01.jpg";
 
 // — Project: National Parasitology Reference Laboratory —
 import parasitologyLabHero from "@/assets/projects-curated/parasitology-lab-lakka/hero.jpg";
@@ -151,24 +152,36 @@ import parasitologyLabG2 from "@/assets/projects-curated/parasitology-lab-lakka/
 // — Project: 3 Bedroom Duplex, 8 Blocks —
 import duplex8BlocksTemaHero from "@/assets/projects-curated/duplex-8-blocks-tema/hero.jpg";
 import duplex8BlocksTemaG1 from "@/assets/projects-curated/duplex-8-blocks-tema/gallery-01.jpg";
+import duplex8BlocksTemaG2 from "@/assets/projects-curated/duplex-8-blocks-tema/gallery-02.jpg";
+import duplex8BlocksTemaG3 from "@/assets/projects-curated/duplex-8-blocks-tema/gallery-03.jpg";
 
 // — Project: 3 Bedroom Duplex Villa (Guam) —
 import duplexVillaGuamHero from "@/assets/projects-curated/duplex-villa-guam/hero.jpg";
 import duplexVillaGuamG1 from "@/assets/projects-curated/duplex-villa-guam/gallery-01.jpg";
+import duplexVillaGuamG2 from "@/assets/projects-curated/duplex-villa-guam/gallery-02.jpg";
+import duplexVillaGuamG3 from "@/assets/projects-curated/duplex-villa-guam/gallery-03.jpg";
 
 // — Project: 3 Bedroom House (Aflao) —
 import houseAflaoHero from "@/assets/projects-curated/house-aflao/hero.jpg";
 import houseAflaoG1 from "@/assets/projects-curated/house-aflao/gallery-01.jpg";
+import houseAflaoG2 from "@/assets/projects-curated/house-aflao/gallery-02.jpg";
+import houseAflaoG3 from "@/assets/projects-curated/house-aflao/gallery-03.jpg";
 
 // — Project: 4 Bedroom Duplex Villa, Appolonia 1 —
 import duplexVillaAppolonia1Hero from "@/assets/projects-curated/duplex-villa-appolonia-1/hero.jpg";
+import duplexVillaAppolonia1G1 from "@/assets/projects-curated/duplex-villa-appolonia-1/gallery-01.jpg";
+import duplexVillaAppolonia1G2 from "@/assets/projects-curated/duplex-villa-appolonia-1/gallery-02.jpg";
 
 // — Project: 4 Bedroom Duplex Villa (Limbe, Cameroon) —
 import duplexVillaLimbeHero from "@/assets/projects-curated/duplex-villa-limbe-cameroon/hero.jpg";
 import duplexVillaLimbeG1 from "@/assets/projects-curated/duplex-villa-limbe-cameroon/gallery-01.jpg";
+import duplexVillaLimbeG2 from "@/assets/projects-curated/duplex-villa-limbe-cameroon/gallery-02.jpg";
+import duplexVillaLimbeG3 from "@/assets/projects-curated/duplex-villa-limbe-cameroon/gallery-03.jpg";
 
 // — Project: 4 Bedroom Duplex Villa, Tema Community 25 —
 import duplexVillaTema2021Hero from "@/assets/projects-curated/duplex-villa-tema-2021/hero.jpg";
+import duplexVillaTema2021G1 from "@/assets/projects-curated/duplex-villa-tema-2021/gallery-01.jpg";
+import duplexVillaTema2021G2 from "@/assets/projects-curated/duplex-villa-tema-2021/gallery-02.jpg";
 
 // — Project: 4 Bedroom Interior —
 import interiorAccraHero from "@/assets/projects-curated/interior-accra/hero.jpg";
@@ -178,18 +191,26 @@ import interiorAccraG2 from "@/assets/projects-curated/interior-accra/gallery-02
 // — Project: 4 Bedroom Villa (Portland, US) —
 import villaPortlandUsHero from "@/assets/projects-curated/villa-portland-us/hero.jpg";
 import villaPortlandUsG1 from "@/assets/projects-curated/villa-portland-us/gallery-01.jpg";
+import villaPortlandUsG2 from "@/assets/projects-curated/villa-portland-us/gallery-02.jpg";
+import villaPortlandUsG3 from "@/assets/projects-curated/villa-portland-us/gallery-03.jpg";
 
 // — Project: 4 Bedroom Duplex Villa (Accra 2023) —
 import duplexVillaAccra2023Hero from "@/assets/projects-curated/duplex-villa-accra-2023/hero.jpg";
 import duplexVillaAccra2023G1 from "@/assets/projects-curated/duplex-villa-accra-2023/gallery-01.jpg";
+import duplexVillaAccra2023G2 from "@/assets/projects-curated/duplex-villa-accra-2023/gallery-02.jpg";
+import duplexVillaAccra2023G3 from "@/assets/projects-curated/duplex-villa-accra-2023/gallery-03.jpg";
 
 // — Project: 4 Unit, 5 Bedroom Duplex Estate —
 import duplexEstateFreetownHero from "@/assets/projects-curated/duplex-estate-freetown/hero.jpg";
 import duplexEstateFreetownG1 from "@/assets/projects-curated/duplex-estate-freetown/gallery-01.jpg";
+import duplexEstateFreetownG2 from "@/assets/projects-curated/duplex-estate-freetown/gallery-02.jpg";
+import duplexEstateFreetownG3 from "@/assets/projects-curated/duplex-estate-freetown/gallery-03.jpg";
 
 // — Project: 6 Units, 2 Bedroom Villa —
 import villa6unitsFreetownHero from "@/assets/projects-curated/villa-6units-freetown/hero.jpg";
 import villa6unitsFreetownG1 from "@/assets/projects-curated/villa-6units-freetown/gallery-01.jpg";
+import villa6unitsFreetownG2 from "@/assets/projects-curated/villa-6units-freetown/gallery-02.jpg";
+import villa6unitsFreetownG3 from "@/assets/projects-curated/villa-6units-freetown/gallery-03.jpg";
 
 export const projects: Project[] = [
   {
@@ -233,7 +254,7 @@ export const projects: Project[] = [
     description: residentialDescription("Portland, United States", "2022"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: villaPortlandUsHero,
-    gallery: [villaPortlandUsG1],
+    gallery: [villaPortlandUsG1, villaPortlandUsG2, villaPortlandUsG3],
     featured: false,
   },
   {
@@ -249,7 +270,7 @@ export const projects: Project[] = [
     description: residentialDescription("Accra, Ghana", "2023"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplexVillaAccra2023Hero,
-    gallery: [duplexVillaAccra2023G1],
+    gallery: [duplexVillaAccra2023G1, duplexVillaAccra2023G2, duplexVillaAccra2023G3],
     featured: false,
   },
   {
@@ -265,7 +286,7 @@ export const projects: Project[] = [
     description: residentialDescription("Freetown, Sierra Leone", "2021"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplexEstateFreetownHero,
-    gallery: [duplexEstateFreetownG1],
+    gallery: [duplexEstateFreetownG1, duplexEstateFreetownG2, duplexEstateFreetownG3],
     featured: false,
   },
   {
@@ -281,7 +302,7 @@ export const projects: Project[] = [
     description: residentialDescription("Freetown, Sierra Leone", "2021"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: villa6unitsFreetownHero,
-    gallery: [villa6unitsFreetownG1],
+    gallery: [villa6unitsFreetownG1, villa6unitsFreetownG2, villa6unitsFreetownG3],
     featured: false,
   },
   {
@@ -297,7 +318,7 @@ export const projects: Project[] = [
     description: residentialDescription("Tema Community 25, Ghana", "2019"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplex8BlocksTemaHero,
-    gallery: [duplex8BlocksTemaG1],
+    gallery: [duplex8BlocksTemaG1, duplex8BlocksTemaG2, duplex8BlocksTemaG3],
     featured: false,
   },
   {
@@ -313,7 +334,7 @@ export const projects: Project[] = [
     description: residentialDescription("Guam", "2023"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplexVillaGuamHero,
-    gallery: [duplexVillaGuamG1],
+    gallery: [duplexVillaGuamG1, duplexVillaGuamG2, duplexVillaGuamG3],
     featured: false,
   },
   {
@@ -329,7 +350,7 @@ export const projects: Project[] = [
     description: residentialDescription("Aflao, Ghana", "2021"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: houseAflaoHero,
-    gallery: [houseAflaoG1],
+    gallery: [houseAflaoG1, houseAflaoG2, houseAflaoG3],
     featured: false,
   },
   {
@@ -345,7 +366,7 @@ export const projects: Project[] = [
     description: residentialDescription("Appolonia, Ghana", "2021"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplexVillaAppolonia1Hero,
-    gallery: [],
+    gallery: [duplexVillaAppolonia1G1, duplexVillaAppolonia1G2],
     featured: false,
   },
   {
@@ -361,7 +382,7 @@ export const projects: Project[] = [
     description: residentialDescription("Limbe, Cameroon", "2023"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplexVillaLimbeHero,
-    gallery: [duplexVillaLimbeG1],
+    gallery: [duplexVillaLimbeG1, duplexVillaLimbeG2, duplexVillaLimbeG3],
     featured: false,
   },
   {
@@ -377,7 +398,7 @@ export const projects: Project[] = [
     description: residentialDescription("Tema Community 25, Ghana", "2021"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplexVillaTema2021Hero,
-    gallery: [],
+    gallery: [duplexVillaTema2021G1, duplexVillaTema2021G2],
     featured: false,
   },
   {
@@ -409,7 +430,7 @@ export const projects: Project[] = [
     description: residentialDescription("Iran"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplexVillaIran4bedHero,
-    gallery: [],
+    gallery: [duplexVillaIran4bedG1, duplexVillaIran4bedG2],
     featured: false,
   },
   {
@@ -441,7 +462,7 @@ export const projects: Project[] = [
     description: residentialDescription("Devtraco, Ghana", "2019"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplexVillaDevtracoHero,
-    gallery: [duplexVillaDevtracoG1],
+    gallery: [duplexVillaDevtracoG1, duplexVillaDevtracoG2, duplexVillaDevtracoG3],
     featured: false,
   },
   {
@@ -457,26 +478,7 @@ export const projects: Project[] = [
     description: residentialDescription("Iran"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplexVillaIran5bedHero,
-    gallery: [],
-    featured: false,
-  },
-  {
-    slug: "garden-villa",
-    name: "Garden Villa",
-    category: "Residential",
-    location: "—",
-    year: "—",
-    clientType: "Private",
-    scope: RESIDENTIAL_SCOPE,
-    size: "—",
-    materials: RESIDENTIAL_MATERIALS,
-    description: {
-      en: "A private residential villa with an ornamental garden and pool courtyard.",
-      fr: "A private residential villa with an ornamental garden and pool courtyard.",
-    },
-    highlights: RESIDENTIAL_HIGHLIGHTS,
-    heroImage: gardenVillaHero,
-    gallery: [gardenVillaG1],
+    gallery: [duplexVillaIran5bedG1],
     featured: false,
   },
   {
@@ -574,7 +576,7 @@ export const projects: Project[] = [
     },
     heroImage: schoolFreetownHero,
     gallery: [schoolFreetownG1, schoolFreetownG2, schoolFreetownG3],
-    featured: true,
+    featured: false,
   },
   {
     slug: "commercial-complex-freetown",
@@ -611,7 +613,7 @@ export const projects: Project[] = [
   },
   {
     slug: "beach-villa-accra",
-    name: "5 Bedroom Triplex Beach Villa",
+    name: "Beach Villa Accra",
     category: "Residential",
     location: "Accra, Ghana",
     year: "2023",

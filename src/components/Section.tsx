@@ -53,16 +53,25 @@ export function PageHero({
   title,
   lead,
   image,
+  imagePosition = "50%",
 }: {
   title: ReactNode;
   lead?: ReactNode;
   image?: StaticImageData;
+  imagePosition?: string;
 }) {
   return (
     <section className="relative flex min-h-[60dvh] flex-col justify-end overflow-hidden border-b border-primary-foreground/12 bg-navy-deep py-16 text-primary-foreground md:py-20">
       {image ? (
         <>
-          <Image src={image} alt="" fill priority className="object-cover opacity-70" />
+          <Image
+            src={image}
+            alt=""
+            fill
+            priority
+            className="object-cover opacity-70"
+            style={{ objectPosition: `center ${imagePosition}` }}
+          />
           <div className="absolute inset-0 bg-navy-deep/18" />
         </>
       ) : null}
