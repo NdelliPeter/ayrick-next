@@ -71,7 +71,12 @@ const RESIDENTIAL_HIGHLIGHTS: L<string[]> = {
   ],
 };
 
-// — Project: 5 Bedroom Triplex Beach Villa —
+// Placeholders for newly added projects whose location/year are not yet
+// confirmed by Ayrick. Replace field-by-field as the real details come in.
+const LOCATION_TBC = "Location TBC";
+const YEAR_TBC = "TBC";
+
+// — Project: Tidal Lines-5 bedroom triplex beach villa Accra 2023 —
 import beachVillaAccraHero from "@/assets/projects-curated/beach-villa-accra/hero.jpg";
 import beachVillaAccraG1 from "@/assets/projects-curated/beach-villa-accra/gallery-01.jpg";
 import beachVillaAccraG2 from "@/assets/projects-curated/beach-villa-accra/gallery-02.jpg";
@@ -84,7 +89,7 @@ const MIXED_USE_MATERIALS: L = {
   fr: "Reinforced concrete frame, curtain glazing, precast concrete cladding elements",
 };
 
-// — Project: Commercial & Residential Complex —
+// — Project: The White Strata-commercial & Residential complex Freetown 2022 —
 import commercialComplexFreetownHero from "@/assets/projects-curated/commercial-complex-freetown/hero.jpg";
 import commercialComplexFreetownG1 from "@/assets/projects-curated/commercial-complex-freetown/gallery-01.jpg";
 import commercialComplexFreetownG2 from "@/assets/projects-curated/commercial-complex-freetown/gallery-02.jpg";
@@ -106,14 +111,14 @@ import schoolFreetownG1 from "@/assets/projects-curated/school-freetown/gallery-
 import schoolFreetownG2 from "@/assets/projects-curated/school-freetown/gallery-02.jpg";
 import schoolFreetownG3 from "@/assets/projects-curated/school-freetown/gallery-03.jpg";
 
-// — Project: Family House, 3 Triplex Houses —
+// — Project: Threefold family Grounds-family house 3 triplex houses Aburi 2021 —
 import familyHouseAburiHero from "@/assets/projects-curated/family-house-aburi/hero.jpg";
 import familyHouseAburiG1 from "@/assets/projects-curated/family-house-aburi/gallery-01.jpg";
 import familyHouseAburiG2 from "@/assets/projects-curated/family-house-aburi/gallery-02.jpg";
 import familyHouseAburiG3 from "@/assets/projects-curated/family-house-aburi/gallery-03.jpg";
 import familyHouseAburiG4 from "@/assets/projects-curated/family-house-aburi/gallery-04.jpg";
 
-// — Project: 4+2 Bedroom Triplex Villa, Aburi Road —
+// — Project: Counter-Mountain Residence-4+2 bedroom triplex villa Aburi road 2021 —
 import aburiRoadVillaHero from "@/assets/projects-curated/aburi-road-villa/hero.jpg";
 import aburiRoadVillaG1 from "@/assets/projects-curated/aburi-road-villa/gallery-01.jpg";
 import aburiRoadVillaG2 from "@/assets/projects-curated/aburi-road-villa/gallery-02.jpg";
@@ -154,6 +159,10 @@ import duplex8BlocksTemaHero from "@/assets/projects-curated/duplex-8-blocks-tem
 import duplex8BlocksTemaG1 from "@/assets/projects-curated/duplex-8-blocks-tema/gallery-01.jpg";
 import duplex8BlocksTemaG2 from "@/assets/projects-curated/duplex-8-blocks-tema/gallery-02.jpg";
 import duplex8BlocksTemaG3 from "@/assets/projects-curated/duplex-8-blocks-tema/gallery-03.jpg";
+import duplex8BlocksTemaG4 from "@/assets/projects-curated/duplex-8-blocks-tema/gallery-04.jpg";
+import duplex8BlocksTemaG5 from "@/assets/projects-curated/duplex-8-blocks-tema/gallery-05.jpg";
+import duplex8BlocksTemaG6 from "@/assets/projects-curated/duplex-8-blocks-tema/gallery-06.jpg";
+import duplex8BlocksTemaG7 from "@/assets/projects-curated/duplex-8-blocks-tema/gallery-07.jpg";
 
 // — Project: 3 Bedroom Duplex Villa (Guam) —
 import duplexVillaGuamHero from "@/assets/projects-curated/duplex-villa-guam/hero.jpg";
@@ -188,7 +197,7 @@ import interiorAccraHero from "@/assets/projects-curated/interior-accra/hero.jpg
 import interiorAccraG1 from "@/assets/projects-curated/interior-accra/gallery-01.jpg";
 import interiorAccraG2 from "@/assets/projects-curated/interior-accra/gallery-02.jpg";
 
-// — Project: 4 Bedroom Villa (Portland, US) —
+// — Project: The Other Side- 4 bedroom villa Portland main US 2022 —
 import villaPortlandUsHero from "@/assets/projects-curated/villa-portland-us/hero.jpg";
 import villaPortlandUsG1 from "@/assets/projects-curated/villa-portland-us/gallery-01.jpg";
 import villaPortlandUsG2 from "@/assets/projects-curated/villa-portland-us/gallery-02.jpg";
@@ -206,16 +215,61 @@ import duplexEstateFreetownG1 from "@/assets/projects-curated/duplex-estate-free
 import duplexEstateFreetownG2 from "@/assets/projects-curated/duplex-estate-freetown/gallery-02.jpg";
 import duplexEstateFreetownG3 from "@/assets/projects-curated/duplex-estate-freetown/gallery-03.jpg";
 
-// — Project: 6 Units, 2 Bedroom Villa —
+// — Project: White Form-6 units 2bedroom villa Freetown 2021 —
 import villa6unitsFreetownHero from "@/assets/projects-curated/villa-6units-freetown/hero.jpg";
 import villa6unitsFreetownG1 from "@/assets/projects-curated/villa-6units-freetown/gallery-01.jpg";
 import villa6unitsFreetownG2 from "@/assets/projects-curated/villa-6units-freetown/gallery-02.jpg";
 import villa6unitsFreetownG3 from "@/assets/projects-curated/villa-6units-freetown/gallery-03.jpg";
 
+// — Project: 4 Bedroom Coastal Villa, Laboma Beach —
+import coastalVillaLabomaHero from "@/assets/projects-curated/coastal-villa-laboma/hero.jpg";
+import coastalVillaLabomaG1 from "@/assets/projects-curated/coastal-villa-laboma/gallery-01.jpg";
+import coastalVillaLabomaG2 from "@/assets/projects-curated/coastal-villa-laboma/gallery-02.jpg";
+import coastalVillaLabomaG3 from "@/assets/projects-curated/coastal-villa-laboma/gallery-03.jpg";
+import coastalVillaLabomaG4 from "@/assets/projects-curated/coastal-villa-laboma/gallery-04.jpg";
+import coastalVillaLabomaG5 from "@/assets/projects-curated/coastal-villa-laboma/gallery-05.jpg";
+
+// — Project: Sea Level — Shop & Residence, Laboma Beach —
+import seaLevelLabomaHero from "@/assets/projects-curated/sea-level-laboma/hero.jpg";
+import seaLevelLabomaG1 from "@/assets/projects-curated/sea-level-laboma/gallery-01.jpg";
+import seaLevelLabomaG2 from "@/assets/projects-curated/sea-level-laboma/gallery-02.jpg";
+import seaLevelLabomaG3 from "@/assets/projects-curated/sea-level-laboma/gallery-03.jpg";
+import seaLevelLabomaG4 from "@/assets/projects-curated/sea-level-laboma/gallery-04.jpg";
+import seaLevelLabomaG5 from "@/assets/projects-curated/sea-level-laboma/gallery-05.jpg";
+
+// — Project: Sierra Crest Apartments —
+import sierraCrestHero from "@/assets/projects-curated/sierra-crest-apartments/hero.jpg";
+import sierraCrestG1 from "@/assets/projects-curated/sierra-crest-apartments/gallery-01.jpg";
+import sierraCrestG2 from "@/assets/projects-curated/sierra-crest-apartments/gallery-02.jpg";
+import sierraCrestG3 from "@/assets/projects-curated/sierra-crest-apartments/gallery-03.jpg";
+import sierraCrestG4 from "@/assets/projects-curated/sierra-crest-apartments/gallery-04.jpg";
+
+// — Project: The Highlands Apartments —
+import theHighlandsHero from "@/assets/projects-curated/the-highlands-apartments/hero.jpg";
+import theHighlandsG1 from "@/assets/projects-curated/the-highlands-apartments/gallery-01.jpg";
+import theHighlandsG2 from "@/assets/projects-curated/the-highlands-apartments/gallery-02.jpg";
+import theHighlandsG3 from "@/assets/projects-curated/the-highlands-apartments/gallery-03.jpg";
+import theHighlandsG4 from "@/assets/projects-curated/the-highlands-apartments/gallery-04.jpg";
+import theHighlandsG5 from "@/assets/projects-curated/the-highlands-apartments/gallery-05.jpg";
+
+// — Project: Iran Embassy Residence —
+import iranEmbassyResidenceHero from "@/assets/projects-curated/iran-embassy-residence/hero.jpg";
+import iranEmbassyResidenceG1 from "@/assets/projects-curated/iran-embassy-residence/gallery-01.jpg";
+import iranEmbassyResidenceG2 from "@/assets/projects-curated/iran-embassy-residence/gallery-02.jpg";
+
+// — Project: Classic and Modern —
+import classicAndModernHero from "@/assets/projects-curated/classic-and-modern/hero.jpg";
+import classicAndModernG1 from "@/assets/projects-curated/classic-and-modern/gallery-01.jpg";
+import classicAndModernG2 from "@/assets/projects-curated/classic-and-modern/gallery-02.jpg";
+import classicAndModernG3 from "@/assets/projects-curated/classic-and-modern/gallery-03.jpg";
+import classicAndModernG4 from "@/assets/projects-curated/classic-and-modern/gallery-04.jpg";
+import classicAndModernG5 from "@/assets/projects-curated/classic-and-modern/gallery-05.jpg";
+import classicAndModernG6 from "@/assets/projects-curated/classic-and-modern/gallery-06.jpg";
+
 export const projects: Project[] = [
   {
     slug: "interior-accra",
-    name: "4 Bedroom Interior",
+    name: "Hearth-4bedroom interior Accra 2023",
     category: "Residential",
     location: "Accra, Ghana",
     year: "2023",
@@ -243,7 +297,7 @@ export const projects: Project[] = [
   },
   {
     slug: "villa-portland-us",
-    name: "4 Bedroom Villa",
+    name: "The Other Side- 4 bedroom villa Portland main US 2022",
     category: "Residential",
     location: "Portland, United States",
     year: "2022",
@@ -259,7 +313,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-accra-2023",
-    name: "4 Bedroom Duplex Villa",
+    name: "The Living Layers-4bedrrom duplex villa Accra 2023",
     category: "Residential",
     location: "Accra, Ghana",
     year: "2023",
@@ -275,7 +329,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-estate-freetown",
-    name: "4 Unit, 5 Bedroom Duplex Estate",
+    name: "Sunlit Neighbourhood-4 unit 5 bedroom duplex estate Freetown 2021",
     category: "Residential",
     location: "Freetown, Sierra Leone",
     year: "2021",
@@ -291,7 +345,7 @@ export const projects: Project[] = [
   },
   {
     slug: "villa-6units-freetown",
-    name: "6 Units, 2 Bedroom Villa",
+    name: "White Form-6 units 2bedroom villa Freetown 2021",
     category: "Residential",
     location: "Freetown, Sierra Leone",
     year: "2021",
@@ -307,7 +361,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-8-blocks-tema",
-    name: "3 Bedroom Duplex, 8 Blocks",
+    name: "The Homestate-3 bedroom duplex 8 blocks Tema co.25 2019",
     category: "Residential",
     location: "Tema Community 25, Ghana",
     year: "2019",
@@ -318,12 +372,20 @@ export const projects: Project[] = [
     description: residentialDescription("Tema Community 25, Ghana", "2019"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: duplex8BlocksTemaHero,
-    gallery: [duplex8BlocksTemaG1, duplex8BlocksTemaG2, duplex8BlocksTemaG3],
+    gallery: [
+      duplex8BlocksTemaG1,
+      duplex8BlocksTemaG2,
+      duplex8BlocksTemaG3,
+      duplex8BlocksTemaG4,
+      duplex8BlocksTemaG5,
+      duplex8BlocksTemaG6,
+      duplex8BlocksTemaG7,
+    ],
     featured: false,
   },
   {
     slug: "duplex-villa-guam",
-    name: "3 Bedroom Duplex Villa",
+    name: "Pacific Haven- 3 bedroom duplex villa Guam 2023",
     category: "Residential",
     location: "Guam",
     year: "2023",
@@ -371,7 +433,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-limbe-cameroon",
-    name: "4 Bedroom Duplex Villa",
+    name: "Quiet Volume-4bedroom duplex villa Limbe Cameron 2023",
     category: "Residential",
     location: "Limbe, Cameroon",
     year: "2023",
@@ -387,7 +449,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-tema-2021",
-    name: "4 Bedroom Duplex Villa, Tema Community 25",
+    name: "Open Court-4bedroom duplex villa Tema co.25 2021",
     category: "Residential",
     location: "Tema Community 25, Ghana",
     year: "2021",
@@ -451,7 +513,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-devtraco",
-    name: "4 Units, 4&5 Bedroom Duplex Villa, Devtraco",
+    name: "Interlock- 4 units 4&5 bedrrom duplex villa Devtraco 2019",
     category: "Residential",
     location: "Devtraco, Ghana",
     year: "2019",
@@ -511,7 +573,7 @@ export const projects: Project[] = [
   },
   {
     slug: "aburi-road-villa",
-    name: "4+2 Bedroom Triplex Villa, Aburi Road",
+    name: "Counter-Mountain Residence-4+2 bedroom triplex villa Aburi road 2021",
     category: "Residential",
     location: "Aburi Road, Ghana",
     year: "2021",
@@ -527,7 +589,7 @@ export const projects: Project[] = [
   },
   {
     slug: "family-house-aburi",
-    name: "Family House, 3 Triplex Houses",
+    name: "Threefold family Grounds-family house 3 triplex houses Aburi 2021",
     category: "Residential",
     location: "Aburi, Ghana",
     year: "2021",
@@ -580,7 +642,7 @@ export const projects: Project[] = [
   },
   {
     slug: "commercial-complex-freetown",
-    name: "Commercial & Residential Complex",
+    name: "The White Strata-commercial & Residential complex Freetown 2022",
     category: "Mixed-Use",
     location: "Freetown, Sierra Leone",
     year: "2022",
@@ -613,7 +675,7 @@ export const projects: Project[] = [
   },
   {
     slug: "beach-villa-accra",
-    name: "Beach Villa Accra",
+    name: "Tidal Lines-5 bedroom triplex beach villa Accra 2023",
     category: "Residential",
     location: "Accra, Ghana",
     year: "2023",
@@ -632,6 +694,169 @@ export const projects: Project[] = [
       beachVillaAccraG5,
     ],
     featured: true,
+  },
+  {
+    slug: "coastal-villa-laboma",
+    name: "4 Bedroom Coastal Villa",
+    category: "Residential",
+    location: "Laboma Beach, Accra, Ghana",
+    year: YEAR_TBC,
+    clientType: "Private",
+    scope: RESIDENTIAL_SCOPE,
+    size: "—",
+    materials: RESIDENTIAL_MATERIALS,
+    description: residentialDescription("Laboma Beach, Accra, Ghana"),
+    highlights: RESIDENTIAL_HIGHLIGHTS,
+    heroImage: coastalVillaLabomaHero,
+    gallery: [
+      coastalVillaLabomaG1,
+      coastalVillaLabomaG2,
+      coastalVillaLabomaG3,
+      coastalVillaLabomaG4,
+      coastalVillaLabomaG5,
+    ],
+    featured: false,
+  },
+  {
+    slug: "sea-level-laboma",
+    name: "Sea Level — Shop & Residence",
+    category: "Mixed-Use",
+    location: "Laboma Beach, Accra, Ghana",
+    year: YEAR_TBC,
+    clientType: "Private",
+    scope: RESIDENTIAL_SCOPE,
+    size: "—",
+    materials: MIXED_USE_MATERIALS,
+    description: {
+      en: "A shop-and-residence building at Laboma Beach, Accra, combining ground-floor commercial space with residential accommodation above.",
+      fr: "Un bâtiment commercial et résidentiel à Laboma Beach, Accra, associant des commerces en rez-de-chaussée à des logements à l'étage.",
+    },
+    highlights: {
+      en: [
+        "Ground-floor retail with residential apartments above",
+        "Delivered as part of Ayrick's mixed-use portfolio",
+      ],
+      fr: [
+        "Commerces en rez-de-chaussée et appartements à l'étage",
+        "Livré dans le cadre du portefeuille multi-usage d'Ayrick",
+      ],
+    },
+    heroImage: seaLevelLabomaHero,
+    gallery: [
+      seaLevelLabomaG1,
+      seaLevelLabomaG2,
+      seaLevelLabomaG3,
+      seaLevelLabomaG4,
+      seaLevelLabomaG5,
+    ],
+    featured: false,
+  },
+  {
+    slug: "sierra-crest-apartments",
+    name: "Sierra Crest Apartments",
+    category: "Residential",
+    location: LOCATION_TBC,
+    year: YEAR_TBC,
+    clientType: "Private",
+    scope: RESIDENTIAL_SCOPE,
+    size: "—",
+    materials: RESIDENTIAL_MATERIALS,
+    description: {
+      en: "A private residential apartment development delivered as part of Ayrick's residential portfolio.",
+      fr: "Un ensemble d'appartements résidentiels privés livré dans le cadre du portefeuille résidentiel d'Ayrick.",
+    },
+    highlights: RESIDENTIAL_HIGHLIGHTS,
+    heroImage: sierraCrestHero,
+    gallery: [sierraCrestG1, sierraCrestG2, sierraCrestG3, sierraCrestG4],
+    featured: false,
+  },
+  {
+    slug: "the-highlands-apartments",
+    name: "The Highlands Apartments",
+    category: "Residential",
+    location: LOCATION_TBC,
+    year: YEAR_TBC,
+    clientType: "Private",
+    scope: RESIDENTIAL_SCOPE,
+    size: "—",
+    materials: RESIDENTIAL_MATERIALS,
+    description: {
+      en: "A private residential apartment development delivered as part of Ayrick's residential portfolio.",
+      fr: "Un ensemble d'appartements résidentiels privés livré dans le cadre du portefeuille résidentiel d'Ayrick.",
+    },
+    highlights: RESIDENTIAL_HIGHLIGHTS,
+    heroImage: theHighlandsHero,
+    gallery: [theHighlandsG1, theHighlandsG2, theHighlandsG3, theHighlandsG4, theHighlandsG5],
+    featured: false,
+  },
+  // Category (residential vs institutional) and exact location still to be
+  // confirmed — see the Iran Embassy Residence row in ayrick-project-catalog.csv.
+  {
+    slug: "iran-embassy-residence",
+    name: "Iran Embassy Residence",
+    category: "Public",
+    location: "Iran",
+    year: YEAR_TBC,
+    clientType: "Government",
+    scope: CIVIC_SCOPE,
+    size: "—",
+    materials: CIVIC_MATERIALS,
+    description: {
+      en: "A diplomatic residence in Iran, delivered as part of Ayrick's public-sector work.",
+      fr: "Une résidence diplomatique en Iran, livrée dans le cadre des projets publics d'Ayrick.",
+    },
+    highlights: {
+      en: [
+        "Residence for diplomatic staff",
+        "Delivered as part of Ayrick's public-sector portfolio",
+      ],
+      fr: [
+        "Résidence pour le personnel diplomatique",
+        "Livré dans le cadre du portefeuille public d'Ayrick",
+      ],
+    },
+    heroImage: iranEmbassyResidenceHero,
+    gallery: [iranEmbassyResidenceG1, iranEmbassyResidenceG2],
+    featured: false,
+  },
+  // NOTE: this entry bundles several distinct buildings from Mashhad (two
+  // apartment blocks, a theatre complex and a set of interiors) under one
+  // project. Split into separate entries if Ayrick wants them catalogued
+  // individually; location/year still need confirming.
+  {
+    slug: "classic-and-modern",
+    name: "Classic and Modern",
+    category: "Mixed-Use",
+    location: "Mashhad, Iran",
+    year: YEAR_TBC,
+    clientType: "Private",
+    scope: RESIDENTIAL_SCOPE,
+    size: "—",
+    materials: MIXED_USE_MATERIALS,
+    description: {
+      en: "A selection of Ayrick's work in Mashhad, Iran — classical apartment facades, contemporary residential interiors and a theatre complex.",
+      fr: "Une sélection de projets d'Ayrick à Mashhad, en Iran — façades d'appartements classiques, intérieurs résidentiels contemporains et complexe théâtral.",
+    },
+    highlights: {
+      en: [
+        "Classical apartment facades alongside contemporary civic architecture",
+        "Residential interiors and a theatre complex",
+      ],
+      fr: [
+        "Façades d'appartements classiques et architecture civique contemporaine",
+        "Intérieurs résidentiels et complexe théâtral",
+      ],
+    },
+    heroImage: classicAndModernHero,
+    gallery: [
+      classicAndModernG1,
+      classicAndModernG2,
+      classicAndModernG3,
+      classicAndModernG4,
+      classicAndModernG5,
+      classicAndModernG6,
+    ],
+    featured: false,
   },
 ];
 
