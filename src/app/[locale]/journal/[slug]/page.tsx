@@ -6,7 +6,7 @@ import { setRequestLocale } from "next-intl/server";
 
 import { ASPECT_RATIOS, ImagePlaceholder } from "@/components/Placeholder";
 import { Section } from "@/components/Section";
-import { journal } from "@/content/site";
+import { journal, ui } from "@/content/site";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pick } from "@/lib/content";
@@ -66,6 +66,13 @@ export default async function ArticlePage({
 
   const t = <T,>(v: { en: T; fr: T }) => pick(locale, v);
   const leadImage = JOURNAL_LEAD_IMAGES[slug];
+  const formatDate = (iso: string, options: Intl.DateTimeFormatOptions) =>
+    new Date(iso).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-GB", options);
+
+  const index = journal.findIndex((e) => e.slug === entry.slug);
+  const previous = index > 0 ? journal[index - 1] : undefined;
+  const next = index < journal.length - 1 ? journal[index + 1] : undefined;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -92,11 +99,7 @@ export default async function ArticlePage({
           <p className="eyebrow mt-8">{t(entry.category)}</p>
           <h1 className="display-lg mt-4">{t(entry.title)}</h1>
           <p className="mt-6 text-sm text-primary-foreground/55">
-            {new Date(entry.date).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-GB", {
-              day: "2-digit",
-              month: "long",
-              year: "numeric",
-            })}
+            {formatDate(entry.date, { day: "2-digit", month: "long", year: "numeric" })}
           </p>
         </div>
       </section>
@@ -106,11 +109,11 @@ export default async function ArticlePage({
           <Image
             src={leadImage}
             alt={entry.title.en}
+            sizes="100vw"
             className={cn(
-              leadImage.height > leadImage.width
-                ? "aspect-[4/3] max-h-[560px] object-top"
-                : ASPECT_RATIOS.wide,
-              "w-full object-cover",
+              // Full-bleed lead image, cropped from the centre of the frame.
+              "w-full object-cover object-center",
+              leadImage.height > leadImage.width ? "h-[55vh] md:h-[75vh]" : ASPECT_RATIOS.wide,
             )}
           />
         ) : (
@@ -123,6 +126,37 @@ export default async function ArticlePage({
           ))}
         </div>
       </Section>
+
+      {previous || next ? (
+        <section className="bg-navy-deep py-16 text-primary-foreground">
+          <div className="container-wide grid gap-10 sm:grid-cols-2">
+            {previous ? (
+              <Link href={`/journal/${previous.slug}`} className="group">
+                <p className="label-meta text-primary-foreground/45">← {t(ui.previousArticle)}</p>
+                <span className="display-lg mt-4 block transition-colors group-hover:text-primary">
+                  {t(previous.title)}
+                </span>
+                <span className="mt-2 block text-sm text-primary-foreground/60">
+                  {t(previous.category)} ·{" "}
+                  {formatDate(previous.date, { day: "2-digit", month: "short", year: "numeric" })}
+                </span>
+              </Link>
+            ) : null}
+            {next ? (
+              <Link href={`/journal/${next.slug}`} className="group sm:col-start-2 sm:text-right">
+                <p className="label-meta text-primary-foreground/45">{t(ui.nextArticle)} →</p>
+                <span className="display-lg mt-4 block transition-colors group-hover:text-primary">
+                  {t(next.title)}
+                </span>
+                <span className="mt-2 block text-sm text-primary-foreground/60">
+                  {t(next.category)} ·{" "}
+                  {formatDate(next.date, { day: "2-digit", month: "short", year: "numeric" })}
+                </span>
+              </Link>
+            ) : null}
+          </div>
+        </section>
+      ) : null}
     </>
   );
 }

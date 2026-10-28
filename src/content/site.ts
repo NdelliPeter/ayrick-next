@@ -28,6 +28,8 @@ export const ui = {
   materials: { en: "Key materials", fr: "Matériaux principaux" },
   next: { en: "Next project", fr: "Projet suivant" },
   previous: { en: "Previous project", fr: "Projet précédent" },
+  nextArticle: { en: "Next article", fr: "Article suivant" },
+  previousArticle: { en: "Previous article", fr: "Article précédent" },
   backToServices: { en: "Back to services", fr: "Retour aux services" },
   otherServices: { en: "Other services", fr: "Autres services" },
   relatedProjects: { en: "Related projects", fr: "Projets liés" },
