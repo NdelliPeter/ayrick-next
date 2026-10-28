@@ -59,10 +59,10 @@ export default async function Home({ params }: { params: Promise<{ locale: Local
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-deep text-primary-foreground">
+      {/* Hero — fills 95% of the viewport so the slider reads as a full-bleed opener */}
+      <section className="relative flex min-h-[95vh] flex-col overflow-hidden bg-navy-deep text-primary-foreground">
         <HeroSlider images={HOME_HERO_IMAGES} />
-        <div className="container-wide relative z-10 grid gap-12 py-28 md:py-40 lg:grid-cols-[1.35fr_1fr] lg:items-end">
+        <div className="container-wide relative z-10 grid flex-1 content-end gap-12 py-28 md:py-40 lg:grid-cols-[1.35fr_1fr] lg:items-end">
           <div>
             <p className="eyebrow">{t(home.heroEyebrow)}</p>
             <h1 className="display-xl mt-6 max-w-4xl">{t(home.heroTitle)}</h1>
