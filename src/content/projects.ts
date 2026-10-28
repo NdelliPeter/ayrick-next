@@ -529,7 +529,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-iran-5bed",
-    name: "5 Bedroom Duplex Villa",
+    name: "Silent Mass",
     category: "Residential",
     location: "Iran",
     year: "—",
