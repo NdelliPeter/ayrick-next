@@ -124,7 +124,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       </Section>
 
       <section className="border-b border-rule">
-        <div className="relative aspect-[21/9]">
+        <div className="relative h-[50vh]">
           <iframe
             title="Studio location"
             src={`https://www.google.com/maps?q=${encodeURIComponent(d.address.join(", "))}&output=embed`}

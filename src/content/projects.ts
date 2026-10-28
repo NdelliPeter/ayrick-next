@@ -697,7 +697,7 @@ export const projects: Project[] = [
   },
   {
     slug: "coastal-villa-laboma",
-    name: "4 Bedroom Coastal Villa",
+    name: "Sea Level — 4 Bedroom Coastal Villa",
     category: "Residential",
     location: "Laboma Beach, Accra, Ghana",
     year: YEAR_TBC,

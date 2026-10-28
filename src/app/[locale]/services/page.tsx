@@ -16,7 +16,8 @@ import type { Locale } from "@/i18n/routing";
 import { pick } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import servicesHero from "@/assets/services-hero.jpg";
-import serviceConceptDesign from "@/assets/service-concept-design.jpg";
+// Conceptual Design now uses a project render rather than the old standalone image.
+import serviceConceptDesign from "@/assets/projects-curated/classic-and-modern/gallery-02.jpg";
 import service3dVisualization from "@/assets/service-3d-visualization.jpg";
 import serviceProjectSupervision from "@/assets/service-project-supervision.jpg";
 import serviceContractManagement from "@/assets/service-contract-management.jpg";
