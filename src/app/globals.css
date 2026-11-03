@@ -8,7 +8,7 @@
  * ---------------------------------------------------------------------
  * Colors sampled directly from the Ayrick logo: deep teal primary,
  * a neutral grey-teal ramp for structure. See ayrick-style-guide.html.
- * Typography: Fraunces (headings/display) + Inter (body, labels, UI).
+ * Typography: Montserrat (headings/display) + Inter (body, labels, UI).
  * Radius: zero everywhere by deliberate brand decision.
  */
 
@@ -23,7 +23,7 @@
   --radius-4xl: 0px;
   --radius-full: 0px;
 
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-display: var(--font-montserrat), "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-sans: var(--font-inter), Helvetica, Arial, sans-serif;
 
   --color-background: var(--background);
@@ -58,36 +58,36 @@
   --radius: 0px;
 
   /* Brand palette — sampled from the Ayrick logo (ayrick-style-guide.html, Sheet 02) */
-  --navy-deep: #1A1E1E;
-  --navy: #0C5A53;
-  --steel: #6C7F7D;
-  --concrete: #F7F8F8;
-  --concrete-dark: #DBE1E0;
-  --rule: #DBE1E0;
+  --navy-deep: #1a1e1e;
+  --navy: #0c5a53;
+  --steel: #6c7f7d;
+  --concrete: #f7f8f8;
+  --concrete-dark: #dbe1e0;
+  --rule: #dbe1e0;
 
-  --background: #F7F8F8;
-  --foreground: #1A1E1E;
+  --background: #f7f8f8;
+  --foreground: #1a1e1e;
   --card: oklch(1 0 0);
-  --card-foreground: #1A1E1E;
+  --card-foreground: #1a1e1e;
   --popover: oklch(1 0 0);
-  --popover-foreground: #1A1E1E;
+  --popover-foreground: #1a1e1e;
   /* Teal 700 — Sheet 03: "the workhorse action color — buttons, links, active states" */
-  --primary: #107A70;
-  --primary-foreground: #FFFFFF;
-  --secondary: #ECEFEE;
-  --secondary-foreground: #1A1E1E;
-  --muted: #ECEFEE;
-  --muted-foreground: #6C7F7D;
+  --primary: #107a70;
+  --primary-foreground: #ffffff;
+  --secondary: #ecefee;
+  --secondary-foreground: #1a1e1e;
+  --muted: #ecefee;
+  --muted-foreground: #6c7f7d;
   /* Neutral — shadcn's own hover/selected-menu-item convention, deliberately not teal (Sheet 03: "teal should feel like an accent, not a wash") */
-  --accent: #ECEFEE;
-  --accent-foreground: #1A1E1E;
+  --accent: #ecefee;
+  --accent-foreground: #1a1e1e;
   /* Teal 100 — tag/badge background, matches Sheet 04's .ex-tag */
-  --accent-soft: #D2F9F5;
+  --accent-soft: #d2f9f5;
   --destructive: oklch(0.52 0.19 27);
   --destructive-foreground: oklch(0.98 0.003 90);
-  --border: #DBE1E0;
-  --input: #DBE1E0;
-  --ring: #107A70;
+  --border: #dbe1e0;
+  --input: #dbe1e0;
+  --ring: #107a70;
 }
 
 @layer base {

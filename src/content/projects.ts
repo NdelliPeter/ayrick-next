@@ -129,11 +129,6 @@ import apartments3BlocksHero from "@/assets/projects-curated/apartments-3-blocks
 import apartments3BlocksG1 from "@/assets/projects-curated/apartments-3-blocks-freetown/gallery-01.jpg";
 import apartments3BlocksG2 from "@/assets/projects-curated/apartments-3-blocks-freetown/gallery-02.jpg";
 
-// — Project: 4 Bedroom Duplex Villa (Iran) —
-import duplexVillaIran4bedHero from "@/assets/projects-curated/duplex-villa-iran-4bed/hero.jpg";
-import duplexVillaIran4bedG1 from "@/assets/projects-curated/duplex-villa-iran-4bed/gallery-01.jpg";
-import duplexVillaIran4bedG2 from "@/assets/projects-curated/duplex-villa-iran-4bed/gallery-02.jpg";
-
 // — Project: 4 Bedroom Duplex Villa, Appolonia —
 import duplexVillaAppolonia2024Hero from "@/assets/projects-curated/duplex-villa-appolonia-2024/hero.jpg";
 import duplexVillaAppolonia2024G1 from "@/assets/projects-curated/duplex-villa-appolonia-2024/gallery-01.jpg";
@@ -252,11 +247,6 @@ import theHighlandsG3 from "@/assets/projects-curated/the-highlands-apartments/g
 import theHighlandsG4 from "@/assets/projects-curated/the-highlands-apartments/gallery-04.jpg";
 import theHighlandsG5 from "@/assets/projects-curated/the-highlands-apartments/gallery-05.jpg";
 
-// — Project: Iran Embassy Residence —
-import iranEmbassyResidenceHero from "@/assets/projects-curated/iran-embassy-residence/hero.jpg";
-import iranEmbassyResidenceG1 from "@/assets/projects-curated/iran-embassy-residence/gallery-01.jpg";
-import iranEmbassyResidenceG2 from "@/assets/projects-curated/iran-embassy-residence/gallery-02.jpg";
-
 // — Project: Classic and Modern —
 import classicAndModernHero from "@/assets/projects-curated/classic-and-modern/hero.jpg";
 import classicAndModernG1 from "@/assets/projects-curated/classic-and-modern/gallery-01.jpg";
@@ -269,7 +259,7 @@ import classicAndModernG6 from "@/assets/projects-curated/classic-and-modern/gal
 export const projects: Project[] = [
   {
     slug: "interior-accra",
-    name: "Hearth-4bedroom interior Accra 2023",
+    name: "Hearth -4bedroom interior Accra 2023",
     category: "Residential",
     location: "Accra, Ghana",
     year: "2023",
@@ -480,22 +470,6 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    slug: "duplex-villa-iran-4bed",
-    name: "4 Bedroom Duplex Villa",
-    category: "Residential",
-    location: "Iran",
-    year: "—",
-    clientType: "Private",
-    scope: RESIDENTIAL_SCOPE,
-    size: "—",
-    materials: RESIDENTIAL_MATERIALS,
-    description: residentialDescription("Iran"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
-    heroImage: duplexVillaIran4bedHero,
-    gallery: [duplexVillaIran4bedG1, duplexVillaIran4bedG2],
-    featured: false,
-  },
-  {
     slug: "duplex-villa-appolonia-2024",
     name: "4 Bedroom Duplex Villa, Appolonia",
     category: "Residential",
@@ -697,7 +671,7 @@ export const projects: Project[] = [
   },
   {
     slug: "coastal-villa-laboma",
-    name: "Sea Level — 4 Bedroom Coastal Villa",
+    name: "4 Bedroom Coastal Villa",
     category: "Residential",
     location: "Laboma Beach, Accra, Ghana",
     year: YEAR_TBC,
@@ -719,7 +693,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sea-level-laboma",
-    name: "Sea Level — Shop & Residence",
+    name: "Sea Level",
     category: "Mixed-Use",
     location: "Laboma Beach, Accra, Ghana",
     year: YEAR_TBC,
@@ -789,43 +763,13 @@ export const projects: Project[] = [
     gallery: [theHighlandsG1, theHighlandsG2, theHighlandsG3, theHighlandsG4, theHighlandsG5],
     featured: false,
   },
-  // Category (residential vs institutional) and exact location still to be
-  // confirmed — see the Iran Embassy Residence row in ayrick-project-catalog.csv.
-  {
-    slug: "iran-embassy-residence",
-    name: "Iran Embassy Residence",
-    category: "Public",
-    location: "Iran",
-    year: YEAR_TBC,
-    clientType: "Government",
-    scope: CIVIC_SCOPE,
-    size: "—",
-    materials: CIVIC_MATERIALS,
-    description: {
-      en: "A diplomatic residence in Iran, delivered as part of Ayrick's public-sector work.",
-      fr: "Une résidence diplomatique en Iran, livrée dans le cadre des projets publics d'Ayrick.",
-    },
-    highlights: {
-      en: [
-        "Residence for diplomatic staff",
-        "Delivered as part of Ayrick's public-sector portfolio",
-      ],
-      fr: [
-        "Résidence pour le personnel diplomatique",
-        "Livré dans le cadre du portefeuille public d'Ayrick",
-      ],
-    },
-    heroImage: iranEmbassyResidenceHero,
-    gallery: [iranEmbassyResidenceG1, iranEmbassyResidenceG2],
-    featured: false,
-  },
   // NOTE: this entry bundles several distinct buildings from Mashhad (two
   // apartment blocks, a theatre complex and a set of interiors) under one
   // project. Split into separate entries if Ayrick wants them catalogued
   // individually; location/year still need confirming.
   {
     slug: "classic-and-modern",
-    name: "Classic and Modern",
+    name: "Some Classical Designs",
     category: "Mixed-Use",
     location: "Mashhad, Iran",
     year: YEAR_TBC,
