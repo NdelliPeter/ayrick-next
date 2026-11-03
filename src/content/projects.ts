@@ -259,7 +259,7 @@ import classicAndModernG6 from "@/assets/projects-curated/classic-and-modern/gal
 export const projects: Project[] = [
   {
     slug: "interior-accra",
-    name: "Hearth -4bedroom interior Accra 2023",
+    name: "Hearth",
     category: "Residential",
     location: "Accra, Ghana",
     year: "2023",
@@ -287,7 +287,7 @@ export const projects: Project[] = [
   },
   {
     slug: "villa-portland-us",
-    name: "The Other Side- 4 bedroom villa Portland main US 2022",
+    name: "The Other Side",
     category: "Residential",
     location: "Portland, United States",
     year: "2022",
@@ -303,7 +303,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-accra-2023",
-    name: "The Living Layers-4bedrrom duplex villa Accra 2023",
+    name: "The Living Layers",
     category: "Residential",
     location: "Accra, Ghana",
     year: "2023",
@@ -319,7 +319,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-estate-freetown",
-    name: "Sunlit Neighbourhood-4 unit 5 bedroom duplex estate Freetown 2021",
+    name: "Sunlit Neighbourhood",
     category: "Residential",
     location: "Freetown, Sierra Leone",
     year: "2021",
@@ -335,7 +335,7 @@ export const projects: Project[] = [
   },
   {
     slug: "villa-6units-freetown",
-    name: "White Form-6 units 2bedroom villa Freetown 2021",
+    name: "White Form",
     category: "Residential",
     location: "Freetown, Sierra Leone",
     year: "2021",
@@ -351,7 +351,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-8-blocks-tema",
-    name: "The Homestate-3 bedroom duplex 8 blocks Tema co.25 2019",
+    name: "The Homestate",
     category: "Residential",
     location: "Tema Community 25, Ghana",
     year: "2019",
@@ -375,7 +375,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-guam",
-    name: "Pacific Haven- 3 bedroom duplex villa Guam 2023",
+    name: "Pacific Haven",
     category: "Residential",
     location: "Guam",
     year: "2023",
@@ -423,7 +423,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-limbe-cameroon",
-    name: "Quiet Volume-4bedroom duplex villa Limbe Cameron 2023",
+    name: "Quiet Volume",
     category: "Residential",
     location: "Limbe, Cameroon",
     year: "2023",
@@ -439,7 +439,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-tema-2021",
-    name: "Open Court-4bedroom duplex villa Tema co.25 2021",
+    name: "Open Court",
     category: "Residential",
     location: "Tema Community 25, Ghana",
     year: "2021",
@@ -487,7 +487,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-devtraco",
-    name: "Interlock- 4 units 4&5 bedrrom duplex villa Devtraco 2019",
+    name: "Interlock",
     category: "Residential",
     location: "Devtraco, Ghana",
     year: "2019",
@@ -547,7 +547,7 @@ export const projects: Project[] = [
   },
   {
     slug: "aburi-road-villa",
-    name: "Counter-Mountain Residence-4+2 bedroom triplex villa Aburi road 2021",
+    name: "Counter-Mountain Residence",
     category: "Residential",
     location: "Aburi Road, Ghana",
     year: "2021",
@@ -563,7 +563,7 @@ export const projects: Project[] = [
   },
   {
     slug: "family-house-aburi",
-    name: "Threefold family Grounds-family house 3 triplex houses Aburi 2021",
+    name: "Threefold family Grounds",
     category: "Residential",
     location: "Aburi, Ghana",
     year: "2021",
@@ -616,7 +616,7 @@ export const projects: Project[] = [
   },
   {
     slug: "commercial-complex-freetown",
-    name: "The White Strata-commercial & Residential complex Freetown 2022",
+    name: "The White Strata",
     category: "Mixed-Use",
     location: "Freetown, Sierra Leone",
     year: "2022",
@@ -649,7 +649,7 @@ export const projects: Project[] = [
   },
   {
     slug: "beach-villa-accra",
-    name: "Tidal Lines-5 bedroom triplex beach villa Accra 2023",
+    name: "Tidal Lines",
     category: "Residential",
     location: "Accra, Ghana",
     year: "2023",
