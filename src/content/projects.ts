@@ -276,7 +276,6 @@ import theHighlandsG8 from "@/assets/projects-curated/the-highlands-apartments/g
 // — Project: Classic and Modern —
 import classicAndModernHero from "@/assets/projects-curated/classic-and-modern/hero.jpg";
 import classicAndModernG1 from "@/assets/projects-curated/classic-and-modern/gallery-01.jpg";
-import classicAndModernG2 from "@/assets/projects-curated/classic-and-modern/gallery-02.jpg";
 import classicAndModernG3 from "@/assets/projects-curated/classic-and-modern/gallery-03.jpg";
 import classicAndModernG4 from "@/assets/projects-curated/classic-and-modern/gallery-04.jpg";
 import classicAndModernG5 from "@/assets/projects-curated/classic-and-modern/gallery-05.jpg";
@@ -817,7 +816,6 @@ export const projects: Project[] = [
     heroImage: classicAndModernHero,
     gallery: [
       classicAndModernG1,
-      classicAndModernG2,
       classicAndModernG3,
       classicAndModernG4,
       classicAndModernG5,
