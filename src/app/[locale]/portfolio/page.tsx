@@ -48,8 +48,8 @@ export default async function PortfolioPage({ params }: { params: Promise<{ loca
       <PageHero
         title={t({ en: "Every Project, On The Record.", fr: "Chaque projet, consigné." })}
         lead={t({
-          en: "Twenty-six selected commissions from Ayrick's project archive, spanning residential, civic and mixed-use work.",
-          fr: "Vingt-six projets sélectionnés dans les archives d'Ayrick, couvrant des réalisations résidentielles, civiques et multi-usages.",
+          en: "Twenty-five selected commissions from Ayrick's project archive, spanning residential, civic and mixed-use work.",
+          fr: "Vingt-cinq projets sélectionnés dans les archives d'Ayrick, couvrant des réalisations résidentielles, civiques et multi-usages.",
         })}
         image={portfolioHero}
         imagePosition="30%"

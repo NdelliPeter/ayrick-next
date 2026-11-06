@@ -60,14 +60,38 @@ const residentialDescription = (location: string, year?: string): L => {
     : `A private residential development in ${location}.`;
   return { en: text, fr: text };
 };
+// Highlight sets are split by unit typology so each project states the correct
+// one — duplex or triplex — instead of a single catch-all phrase.
 const RESIDENTIAL_HIGHLIGHTS: L<string[]> = {
   en: [
-    "Multi-unit duplex/triplex residential development",
+    "Residential development delivered for a private client",
     "Delivered as part of Ayrick's residential portfolio",
   ],
   fr: [
-    "Multi-unit duplex/triplex residential development",
+    "Projet résidentiel réalisé pour un client privé",
+    "Livré dans le cadre du portefeuille résidentiel d'Ayrick",
+  ],
+};
+
+const DUPLEX_HIGHLIGHTS: L<string[]> = {
+  en: [
+    "Multi-unit duplex residential development",
     "Delivered as part of Ayrick's residential portfolio",
+  ],
+  fr: [
+    "Ensemble résidentiel de duplex",
+    "Livré dans le cadre du portefeuille résidentiel d'Ayrick",
+  ],
+};
+
+const TRIPLEX_HIGHLIGHTS: L<string[]> = {
+  en: [
+    "Multi-unit triplex residential development",
+    "Delivered as part of Ayrick's residential portfolio",
+  ],
+  fr: [
+    "Ensemble résidentiel de triplex",
+    "Livré dans le cadre du portefeuille résidentiel d'Ayrick",
   ],
 };
 
@@ -124,15 +148,14 @@ import aburiRoadVillaG1 from "@/assets/projects-curated/aburi-road-villa/gallery
 import aburiRoadVillaG2 from "@/assets/projects-curated/aburi-road-villa/gallery-02.jpg";
 import aburiRoadVillaG3 from "@/assets/projects-curated/aburi-road-villa/gallery-03.jpg";
 
-// — Project: 3&2 Bedroom Apartments, 3 Blocks —
-import apartments3BlocksHero from "@/assets/projects-curated/apartments-3-blocks-freetown/hero.jpg";
-import apartments3BlocksG1 from "@/assets/projects-curated/apartments-3-blocks-freetown/gallery-01.jpg";
-import apartments3BlocksG2 from "@/assets/projects-curated/apartments-3-blocks-freetown/gallery-02.jpg";
-
 // — Project: 4 Bedroom Duplex Villa, Appolonia —
 import duplexVillaAppolonia2024Hero from "@/assets/projects-curated/duplex-villa-appolonia-2024/hero.jpg";
 import duplexVillaAppolonia2024G1 from "@/assets/projects-curated/duplex-villa-appolonia-2024/gallery-01.jpg";
 import duplexVillaAppolonia2024G2 from "@/assets/projects-curated/duplex-villa-appolonia-2024/gallery-02.jpg";
+import duplexVillaAppolonia2024G3 from "@/assets/projects-curated/duplex-villa-appolonia-2024/gallery-03.jpg";
+import duplexVillaAppolonia2024G4 from "@/assets/projects-curated/duplex-villa-appolonia-2024/gallery-04.jpg";
+import duplexVillaAppolonia2024G5 from "@/assets/projects-curated/duplex-villa-appolonia-2024/gallery-05.jpg";
+import duplexVillaAppolonia2024G6 from "@/assets/projects-curated/duplex-villa-appolonia-2024/gallery-06.jpg";
 
 // — Project: 4 Units, 4&5 Bedroom Duplex Villa, Devtraco —
 import duplexVillaDevtracoHero from "@/assets/projects-curated/duplex-villa-devtraco/hero.jpg";
@@ -239,13 +262,16 @@ import sierraCrestG2 from "@/assets/projects-curated/sierra-crest-apartments/gal
 import sierraCrestG3 from "@/assets/projects-curated/sierra-crest-apartments/gallery-03.jpg";
 import sierraCrestG4 from "@/assets/projects-curated/sierra-crest-apartments/gallery-04.jpg";
 
-// — Project: The Highlands Apartments —
+// — Project: The Highlands HMS —
 import theHighlandsHero from "@/assets/projects-curated/the-highlands-apartments/hero.jpg";
 import theHighlandsG1 from "@/assets/projects-curated/the-highlands-apartments/gallery-01.jpg";
 import theHighlandsG2 from "@/assets/projects-curated/the-highlands-apartments/gallery-02.jpg";
 import theHighlandsG3 from "@/assets/projects-curated/the-highlands-apartments/gallery-03.jpg";
 import theHighlandsG4 from "@/assets/projects-curated/the-highlands-apartments/gallery-04.jpg";
 import theHighlandsG5 from "@/assets/projects-curated/the-highlands-apartments/gallery-05.jpg";
+import theHighlandsG6 from "@/assets/projects-curated/the-highlands-apartments/gallery-06.jpg";
+import theHighlandsG7 from "@/assets/projects-curated/the-highlands-apartments/gallery-07.jpg";
+import theHighlandsG8 from "@/assets/projects-curated/the-highlands-apartments/gallery-08.jpg";
 
 // — Project: Classic and Modern —
 import classicAndModernHero from "@/assets/projects-curated/classic-and-modern/hero.jpg";
@@ -296,7 +322,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Portland, United States", "2022"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: villaPortlandUsHero,
     gallery: [villaPortlandUsG1, villaPortlandUsG2, villaPortlandUsG3],
     featured: false,
@@ -312,7 +338,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Accra, Ghana", "2023"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: duplexVillaAccra2023Hero,
     gallery: [duplexVillaAccra2023G1, duplexVillaAccra2023G2, duplexVillaAccra2023G3],
     featured: false,
@@ -328,7 +354,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Freetown, Sierra Leone", "2021"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: duplexEstateFreetownHero,
     gallery: [duplexEstateFreetownG1, duplexEstateFreetownG2, duplexEstateFreetownG3],
     featured: false,
@@ -344,7 +370,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Freetown, Sierra Leone", "2021"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: villa6unitsFreetownHero,
     gallery: [villa6unitsFreetownG1, villa6unitsFreetownG2, villa6unitsFreetownG3],
     featured: false,
@@ -360,7 +386,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Tema Community 25, Ghana", "2019"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: duplex8BlocksTemaHero,
     gallery: [
       duplex8BlocksTemaG1,
@@ -384,14 +410,14 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Guam", "2023"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: duplexVillaGuamHero,
     gallery: [duplexVillaGuamG1, duplexVillaGuamG2, duplexVillaGuamG3],
     featured: false,
   },
   {
     slug: "house-aflao",
-    name: "3 Bedroom House",
+    name: "The Good Fold",
     category: "Residential",
     location: "Aflao, Ghana",
     year: "2021",
@@ -407,7 +433,7 @@ export const projects: Project[] = [
   },
   {
     slug: "duplex-villa-appolonia-1",
-    name: "4 Bedroom Duplex Villa, Appolonia 1",
+    name: "Inner Blue",
     category: "Residential",
     location: "Appolonia, Ghana",
     year: "2021",
@@ -416,7 +442,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Appolonia, Ghana", "2021"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: duplexVillaAppolonia1Hero,
     gallery: [duplexVillaAppolonia1G1, duplexVillaAppolonia1G2],
     featured: false,
@@ -432,7 +458,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Limbe, Cameroon", "2023"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: duplexVillaLimbeHero,
     gallery: [duplexVillaLimbeG1, duplexVillaLimbeG2, duplexVillaLimbeG3],
     featured: false,
@@ -448,30 +474,14 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Tema Community 25, Ghana", "2021"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: duplexVillaTema2021Hero,
     gallery: [duplexVillaTema2021G1, duplexVillaTema2021G2],
     featured: false,
   },
   {
-    slug: "apartments-3-blocks-freetown",
-    name: "3&2 Bedroom Apartments, 3 Blocks",
-    category: "Residential",
-    location: "Freetown, Sierra Leone",
-    year: "—",
-    clientType: "Private",
-    scope: RESIDENTIAL_SCOPE,
-    size: "—",
-    materials: RESIDENTIAL_MATERIALS,
-    description: residentialDescription("Freetown, Sierra Leone"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
-    heroImage: apartments3BlocksHero,
-    gallery: [apartments3BlocksG1, apartments3BlocksG2],
-    featured: false,
-  },
-  {
     slug: "duplex-villa-appolonia-2024",
-    name: "4 Bedroom Duplex Villa, Appolonia",
+    name: "Still Horizon",
     category: "Residential",
     location: "Appolonia, Ghana",
     year: "2024",
@@ -480,9 +490,16 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Appolonia, Ghana", "2024"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: duplexVillaAppolonia2024Hero,
-    gallery: [duplexVillaAppolonia2024G1, duplexVillaAppolonia2024G2],
+    gallery: [
+      duplexVillaAppolonia2024G1,
+      duplexVillaAppolonia2024G2,
+      duplexVillaAppolonia2024G3,
+      duplexVillaAppolonia2024G4,
+      duplexVillaAppolonia2024G5,
+      duplexVillaAppolonia2024G6,
+    ],
     featured: false,
   },
   {
@@ -496,7 +513,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Devtraco, Ghana", "2019"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: duplexVillaDevtracoHero,
     gallery: [duplexVillaDevtracoG1, duplexVillaDevtracoG2, duplexVillaDevtracoG3],
     featured: false,
@@ -512,7 +529,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Iran"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: duplexVillaIran5bedHero,
     gallery: [duplexVillaIran5bedG1],
     featured: false,
@@ -556,7 +573,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Aburi Road, Ghana", "2021"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: TRIPLEX_HIGHLIGHTS,
     heroImage: aburiRoadVillaHero,
     gallery: [aburiRoadVillaG1, aburiRoadVillaG2, aburiRoadVillaG3],
     featured: true,
@@ -658,7 +675,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Accra, Ghana", "2023"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: TRIPLEX_HIGHLIGHTS,
     heroImage: beachVillaAccraHero,
     gallery: [
       beachVillaAccraG1,
@@ -671,7 +688,7 @@ export const projects: Project[] = [
   },
   {
     slug: "coastal-villa-laboma",
-    name: "4 Bedroom Coastal Villa",
+    name: "Coastal Villa",
     category: "Residential",
     location: "Laboma Beach, Accra, Ghana",
     year: YEAR_TBC,
@@ -680,7 +697,7 @@ export const projects: Project[] = [
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
     description: residentialDescription("Laboma Beach, Accra, Ghana"),
-    highlights: RESIDENTIAL_HIGHLIGHTS,
+    highlights: DUPLEX_HIGHLIGHTS,
     heroImage: coastalVillaLabomaHero,
     gallery: [
       coastalVillaLabomaG1,
@@ -745,22 +762,28 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    slug: "the-highlands-apartments",
-    name: "The Highlands Apartments",
+    slug: "the-highlands-hms",
+    name: "The Highlands HMS",
     category: "Residential",
-    location: LOCATION_TBC,
-    year: YEAR_TBC,
+    location: "Freetown, Sierra Leone",
+    year: "—",
     clientType: "Private",
     scope: RESIDENTIAL_SCOPE,
     size: "—",
     materials: RESIDENTIAL_MATERIALS,
-    description: {
-      en: "A private residential apartment development delivered as part of Ayrick's residential portfolio.",
-      fr: "Un ensemble d'appartements résidentiels privés livré dans le cadre du portefeuille résidentiel d'Ayrick.",
-    },
+    description: residentialDescription("Freetown, Sierra Leone"),
     highlights: RESIDENTIAL_HIGHLIGHTS,
     heroImage: theHighlandsHero,
-    gallery: [theHighlandsG1, theHighlandsG2, theHighlandsG3, theHighlandsG4, theHighlandsG5],
+    gallery: [
+      theHighlandsG1,
+      theHighlandsG2,
+      theHighlandsG3,
+      theHighlandsG4,
+      theHighlandsG5,
+      theHighlandsG6,
+      theHighlandsG7,
+      theHighlandsG8,
+    ],
     featured: false,
   },
   // NOTE: this entry bundles several distinct buildings from Mashhad (two
